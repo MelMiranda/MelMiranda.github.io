@@ -4,12 +4,13 @@ body{
 	background-image: url("fondo.JPG");
 	background-size: 100% auto;
 	margin: 0 !important; padding: 0 !important;
+	height: 100%;
 
 }
 
 .header{
   background-color: rgba(99,99,99,.3);
-  height: 300px;
+  height: 100rem;
   width: 100%;
   text-align: center;
   
@@ -50,9 +51,31 @@ body{
 
 .description{
 	padding: 100px 100px !important;
+	color: white;
 
 }
 
+
+button{
+	background-color: transparent;
+	border:.5px solid white;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+button:hover{
+	background-color: rgba(255,255,255,.5);
+	border: .5px solid transparent;
+	transition:1s;
+}
+
+.socialimg{
+	width: 50px;
+}
+
+.socialimg:hover{
+	opacity: .5;
+}
 
 
 

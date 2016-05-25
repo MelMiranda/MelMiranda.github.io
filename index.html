@@ -9,14 +9,15 @@
 
     <meta name="author" content="Melania Miranda">
     <link rel="stylesheet" href="stylesheet.css" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="bootstrap/ss/bootstrap.css">
+   <!--  <link rel="shortcut icon" href="/favicon.ico" /> -->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/npm.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/npm.js"></script>
+    <script src="jquery-1.12.4.js"></script>
 
 
 
@@ -26,7 +27,7 @@
 <body class="col-lg-12 col-sm-12 col-md-12 col-xs-12 ">
 
 
-<section class="col-lg-12 col-sm-12 col-md-12 col-xs-12 header"> 
+<section class="col-lg-4 col-sm-4 col-md-4 col-xs-12 header"> 
   <!-- ACA TIENE QUE IR MI IMAGEN Y REFERENCIA DE MI MAS UN FONDO -->
 
   <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 header-inner">
@@ -38,12 +39,13 @@
 
 </section>
 
+<button>siguiente</button>
 
-<section class="col-lg-12 col-sm-12 col-md-12 col-xs-12 description">
+<section class="col-lg-8 col-sm-8 col-md-8 col-xs-12 description">
 
 <!-- ACA TIENE QUE IR INFO SOBRE MI -->
 
-<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 window-0" >
+<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 window-0" >
 
     <h1 >Studies</h1>
 
@@ -55,7 +57,7 @@
 
 </div>
 
-<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 window-1">
+<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 window-1">
     <h1> web Skills  </h1>
 
     <ul class="list-skills">
@@ -75,7 +77,7 @@
 
 
 
-<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 window-2">
+<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 window-2">
 
     <h1 >Other Skills</h1>
 
@@ -91,7 +93,17 @@
 
 </div>
 
-<button>siguiente</button>
+<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 window-3">
+
+    <h1 >Social</h1>
+
+    <a href=""> <img class="socialimg" src="linkedin.png" alt="Linked In"></a>
+    
+
+</div>
+
+
+
   
 </section>
   
@@ -102,10 +114,14 @@
     
 $(document).on("ready",function(){
     slidePage();
-}   
+} );
 
 function slidePage(){
-    $("button").onClick
+    $("button").on("click", function(){
+
+    console.log("checkpoint-1");
+
+    });
 }
 
 </script>
