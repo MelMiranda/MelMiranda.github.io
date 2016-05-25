@@ -41,7 +41,7 @@
 
 </section>
 
-<button>siguiente</button>
+<button class="next">siguiente</button>
 
 <section class="col-lg-8 col-sm-8 col-md-8 col-xs-12 description">
 
@@ -131,9 +131,41 @@ function slidePage(){
 }
 
 function slider(){
-$('.description').bxSlider({
-  mode: 'fade',
-  captions: true
+
+var currentIndex = 0,
+  items = $('.description div'),
+  itemAmt = items.length;
+
+function cycleItems() {
+  var item = $('.description div').eq(currentIndex);
+  items.hide();
+  item.css('display','inline-block');
+}
+
+var autoSlide = setInterval(function() {
+  currentIndex += 1;
+  if (currentIndex > itemAmt - 1) {
+    currentIndex = 0;
+  }
+  cycleItems();
+}, 3000);
+
+$('.next').click(function() {
+  clearInterval(autoSlide);
+  currentIndex += 1;
+  if (currentIndex > itemAmt - 1) {
+    currentIndex = 0;
+  }
+  cycleItems();
+});
+
+$('.prev').click(function() {
+  clearInterval(autoSlide);
+  currentIndex -= 1;
+  if (currentIndex < 0) {
+    currentIndex = itemAmt - 1;
+  }
+  cycleItems();
 });
 
  console.log("checkpoint-2");
