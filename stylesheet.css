@@ -1,0 +1,58 @@
+*{ margin: 0; padding: 0;}
+
+body{
+	background-image: url("fondo.JPG");
+	background-size: 100% auto;
+	margin: 0 !important; padding: 0 !important;
+
+}
+
+.header{
+  background-color: rgba(99,99,99,.3);
+  height: 300px;
+  width: 100%;
+  text-align: center;
+  
+
+}
+
+.header-inner{
+	font-size: 2em;
+  padding: 20px 5px;
+  color: white;
+}
+
+/*.header-inner:before{
+	content: 'Hi, I'm';
+	font-weight: bold;
+}
+*/
+.fade-in {}
+
+
+.imagen-perfil{
+  border-radius: 100%;
+  border: 3px solid red;
+  width: 200px;
+  height: 200px;
+}
+
+
+
+.list-skills{
+	list-style-image: url("red-icon.png");
+}
+
+.list-skills > li:hover {
+	background-color: (255,255,255,1);
+	transition: 1s;
+}
+
+.description{
+	padding: 100px 100px !important;
+
+}
+
+
+
+
