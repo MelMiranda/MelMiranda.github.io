@@ -14,10 +14,12 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
+    
+    <script src="jquery-1.12.4.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="bootstrap/js/npm.js"></script>
-    <script src="jquery-1.12.4.js"></script>
+
 
 
 
@@ -113,15 +115,28 @@
 <script>
     
 $(document).on("ready",function(){
-    slidePage();
+    slider();
 } );
+
 
 function slidePage(){
     $("button").on("click", function(){
 
     console.log("checkpoint-1");
 
+    $(".window-0").fadeOut();
+    $(".window-1").fadeIn("slow");
+
     });
+}
+
+function slider(){
+$('.description').bxSlider({
+  mode: 'fade',
+  captions: true
+});
+
+ console.log("checkpoint-2");
 }
 
 </script>
