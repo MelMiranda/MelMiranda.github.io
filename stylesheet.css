@@ -1,13 +1,22 @@
+/*GENERAL DATA*/
+
+
 *{ margin: 0; padding: 0;}
 
 body{
 	background-image: url("fondo.JPG");
 	background-size: 100% auto;
 	margin: 0 !important; padding: 0 !important;
-	max-height: 
-	
-
 }
+
+.block{
+	opacity: .5;
+}
+
+h1{
+	margin-bottom: 30px !important;
+}
+/*HEADER SECTION*/
 
 .header-section{
   background-color: rgba(99,99,99,.3);
@@ -24,12 +33,6 @@ body{
   color: white;
 }
 
-/*.header-inner:before{
-	content: 'Hi, I'm';
-	font-weight: bold;
-}
-*/
-.fade-in {}
 
 
 .imagen-perfil{
@@ -40,7 +43,7 @@ body{
   margin-bottom: 20px;
 }
 
-
+/*DESCRIPTION SECTION*/
 
 .list-skills{
 	list-style-image: url("red-icon.png");
@@ -57,6 +60,14 @@ body{
 	letter-spacing: 3px;
 
 }
+
+.window-1, .window-2, .window-3{
+ 	display: none;
+}
+
+
+
+/*BUTTON SECTION*/
 
 .button-section{
 	text-align: center;
@@ -100,9 +111,6 @@ button:hover{
 .socialimg:hover{
 	opacity: .5;
 }
- .window-1, .window-2, .window-3{
- 	display: none;
- }
 
 
 
@@ -112,12 +120,20 @@ button:hover{
 
 @media screen and (max-width: 767px){
 
-.header{
+.header-section{
   height: 30rem;
 }
 
 body{
 	background-size: auto 100%;
+}
+
+.description-section{
+	padding: 0px 50px !important;
+}
+
+.button-section{
+	margin: 20px 0;
 }
 
 
