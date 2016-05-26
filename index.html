@@ -29,7 +29,7 @@
 <body class="col-lg-12 col-sm-12 col-md-12 col-xs-12 ">
 
 
-<section class="col-lg-4 col-sm-4 col-md-4 col-xs-12 header"> 
+<section class="col-lg-4 col-sm-4 col-md-4 col-xs-12 header-section"> 
   <!-- ACA TIENE QUE IR MI IMAGEN Y REFERENCIA DE MI MAS UN FONDO -->
 
   <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 header-inner">
@@ -41,10 +41,17 @@
 
 </section>
 
-<button class="next">siguiente</button>
-<button class="prev">anterior</button>
+<div class="col-lg-8 col-sm-8 col-md-8 col-xs-12 button-section">
+  
+    <button class="prev"></button>
+    <button class="next"></button>
+    
 
-<section class="col-lg-8 col-sm-8 col-md-8 col-xs-12 description">
+</div>
+
+<section class="col-lg-8 col-sm-8 col-md-8 col-xs-12 description-section">
+
+
 
 <!-- ACA TIENE QUE IR INFO SOBRE MI -->
 
@@ -100,8 +107,16 @@
 
     <h1 >Social</h1>
 
-    <a href=""> <img class="socialimg" src="linkedin.png" alt="Linked In"></a>
-    
+    <a href="https://ar.linkedin.com/in/melania-s-miranda-cardenas-7ab67253" target="_blank"> 
+        <img class="socialimg" src="linkedin.png" alt="Linked In">
+    </a>
+    <a href="https://github.com/MelMiranda" target="_blank"> 
+        <img class="socialimg" src="github.png" alt="Github">
+    </a>
+
+    <a href="#∫" target="_blank"> 
+        <img class="socialimg" src="mail.png" alt="Mail">
+    </a>
 
 </div>
 
@@ -120,25 +135,14 @@ $(document).on("ready",function(){
 } );
 
 
-function slidePage(){
-    $("button").on("click", function(){
-
-    console.log("checkpoint-1");
-
-    $(".window-0").fadeOut();
-    $(".window-1").fadeIn("slow");
-
-    });
-}
-
 function slider(){
 
 var currentIndex = 0,
-  items = $('.description div'),
+  items = $('.description-section div'),
   itemAmt = items.length;
 
 function cycleItems() {
-  var item = $('.description div').eq(currentIndex);
+  var item = $('.description-section div').eq(currentIndex);
   items.hide();
   item.fadeIn("slow");
 }

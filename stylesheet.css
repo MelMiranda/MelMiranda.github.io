@@ -4,11 +4,12 @@ body{
 	background-image: url("fondo.JPG");
 	background-size: 100% auto;
 	margin: 0 !important; padding: 0 !important;
-	height: 100%;
+	max-height: 
+	
 
 }
 
-.header{
+.header-section{
   background-color: rgba(99,99,99,.3);
   height: 100rem;
   width: 100%;
@@ -49,28 +50,35 @@ body{
 	transition: 1s;
 }
 
-.description{
-	padding: 100px 100px !important;
+.description-section{
+	padding: 50px 100px !important;
 	color: white;
 
 }
 
+.button-section{
+	text-align: center;
+	margin: 30px 0;
+}
 
 button{
-	background-color: transparent;
-	border:.5px solid white;
-	padding: 5px;
-	border-radius: 5px;
+	background-image: url("next-button.png");
+	border:.5px solid black;
+	
+	border-radius: 100%;
 }
 
 button:hover{
-	background-color: rgba(255,255,255,.5);
 	border: .5px solid transparent;
 	transition:1s;
 }
 
+.next{
+	background-image: url("next-button.png");
+}
 .socialimg{
 	width: 50px;
+	margin-right: 10px;
 }
 
 .socialimg:hover{
