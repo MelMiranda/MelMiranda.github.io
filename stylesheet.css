@@ -17,9 +17,9 @@ body{
 	opacity: .5;
 }
 
-h1{
+.description-section h1{
 	margin-bottom: 30px !important;
-        font-size:1em ! Important;
+        font-size:1em !important;
 }
 /*HEADER SECTION*/
 
