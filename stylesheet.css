@@ -4,9 +4,13 @@
 *{ margin: 0; padding: 0;}
 
 body{
-	background-image: url("fondo.JPG");
+	background-image: url("fondo.jpeg");
 	background-size: 100% auto;
 	margin: 0 !important; padding: 0 !important;
+	background-repeat: no-repeat;
+	background-color:rgba(99,99,99,.3);
+	background-attachment: fixed;
+
 }
 
 .block{
@@ -121,11 +125,12 @@ button:hover{
 @media screen and (max-width: 767px){
 
 .header-section{
-  height: 30rem;
+  height: 25rem;
 }
 
 body{
-	background-size: auto 100%;
+	background-size:100vh  auto ;
+	background-image: url("fondo2.jpg");
 }
 
 .description-section{
@@ -137,5 +142,10 @@ body{
 }
 
 
+.imagen-perfil{
+
+  width: 5em;
+  height: 5em;
+}
 /*TERMINA MEDIA QUERY MOBILE*/
 }
