@@ -34,9 +34,10 @@ body{
 
 .imagen-perfil{
   border-radius: 100%;
-  border: 3px solid red;
+  border: 3px solid gray;
   width: 200px;
   height: 200px;
+  margin-bottom: 20px;
 }
 
 
@@ -52,7 +53,8 @@ body{
 
 .description-section{
 	padding: 20px 100px !important;
-	color: white;
+	color: black;
+	letter-spacing: 3px;
 
 }
 
@@ -68,6 +70,7 @@ button{
 	height: 30px;
 	border-radius: 100%;
 	opacity:.9;	
+	margin:0px 20px;
 }
 
 button:hover{
@@ -76,11 +79,13 @@ button:hover{
 }
 
 .next{
-	background-image: url("next-button.png");	
+	background-image: url("next-button.png");
+	margin:0 20px;
 }
 
 .prev{
 	background-image: url("prev-button.png");
+	margin:0 20px;
 }
 
 
@@ -98,6 +103,10 @@ button:hover{
  .window-1, .window-2, .window-3{
  	display: none;
  }
+
+
+
+
 
 /*MEDIA QUERY PARA MOBILE*/
 
