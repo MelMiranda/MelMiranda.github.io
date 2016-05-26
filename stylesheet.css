@@ -88,6 +88,9 @@ button:hover{
   height: 30rem;
 }
 
+body{
+	background-size: auto 100%;
+}
 
 
 /*TERMINA MEDIA QUERY MOBILE*/
