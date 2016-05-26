@@ -80,4 +80,15 @@ button:hover{
  	display: none;
  }
 
+/*MEDIA QUERY PARA MOBILE*/
 
+@media screen and (max-width: 767px){
+
+.header{
+  height: 30rem;
+}
+
+
+
+/*TERMINA MEDIA QUERY MOBILE*/
+}
