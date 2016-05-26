@@ -51,7 +51,7 @@ body{
 }
 
 .description-section{
-	padding: 50px 100px !important;
+	padding: 20px 100px !important;
 	color: white;
 
 }
@@ -62,20 +62,31 @@ body{
 }
 
 button{
-	background-image: url("next-button.png");
-	border:.5px solid black;
-	
+	background-size: 100% 100%;;
+	border:.5px solid gray;
+	width: 30px;
+	height: 30px;
 	border-radius: 100%;
+	opacity:.9;	
 }
 
 button:hover{
-	border: .5px solid transparent;
+	opacity:.7;
 	transition:1s;
 }
 
 .next{
-	background-image: url("next-button.png");
+	background-image: url("next-button.png");	
 }
+
+.prev{
+	background-image: url("prev-button.png");
+}
+
+
+
+/*SECTION SOCIAL*/
+
 .socialimg{
 	width: 50px;
 	margin-right: 10px;
