@@ -1,6 +1,6 @@
 // DOCUMENTO CARGANDO
 
-$(document).on("load",function(){
+$(window).on("load",function(){
 
  loading();
 
@@ -59,6 +59,8 @@ $('.prev').click(function() {
 
 
 function loading(){
-  $(".loading").fadeIn("slow");
-console.log("checkpoint-4");
+
+  console.log("checkpoint-4");
+  $(".loading").fadeOut("");
+
 }

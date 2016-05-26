@@ -27,9 +27,15 @@ body{
 .loading{
 	position: fixed;
 	z-index: 2;
-	width: 25%;
-	margin:25vh 70vh;
-	display: none;
+	width: 100vh;
+	background-color: transparent;
+	text-align: center;
+	margin:25vh 40vh;
+
+}
+
+.loading-gif{
+	width: 15em;
 }
 
 /*HEADER SECTION*/
@@ -161,6 +167,11 @@ body{
 .loading{
     width: 50%;
     margin: 30% 25%;
+}
+
+.loading-img{
+	margin-left: 0;
+	width: 15em;
 }
 /*TERMINA MEDIA QUERY MOBILE*/
 }
