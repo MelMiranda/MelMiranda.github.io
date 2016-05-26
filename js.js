@@ -1,9 +1,19 @@
+// DOCUMENTO CARGANDO
 
+$(document).on("load",function(){
+
+ loading();
+
+});
+
+
+// DOCUMENTO LISTO
 
 $(document).on("ready",function(){
     slider();
 } );
 
+// LISTA DE FUNCIONES 
 
 function slider(){
 
@@ -44,4 +54,11 @@ $('.prev').click(function() {
 });
 
  console.log("checkpoint-2");
+}
+
+
+
+function loading(){
+  $(".loading").fadeIn("slow");
+console.log("checkpoint-4");
 }
