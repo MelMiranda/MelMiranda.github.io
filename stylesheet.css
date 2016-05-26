@@ -17,9 +17,12 @@ body{
 	opacity: .5;
 }
 
-h1{
-	margin-bottom: 30px !important;
+.description-section h1{
+	margin-bottom: 30px;
+	font-size: 1.5em;
+	font-weight: bold;
 }
+
 /*HEADER SECTION*/
 
 .header-section{
@@ -27,8 +30,6 @@ h1{
   height: 100rem;
   width: 100%;
   text-align: center;
-  
-
 }
 
 .header-inner{
@@ -125,7 +126,7 @@ button:hover{
 @media screen and (max-width: 767px){
 
 .header-section{
-  height: 25rem;
+  height: 22rem;
 }
 
 body{
@@ -135,6 +136,7 @@ body{
 
 .description-section{
 	padding: 0px 50px !important;
+	margin-bottom: 20px;
 }
 
 .button-section{
@@ -144,8 +146,10 @@ body{
 
 .imagen-perfil{
 
-  width: 5em;
-  height: 5em;
+  width: 4.5em;
+  height: 4.5em;
 }
+
+
 /*TERMINA MEDIA QUERY MOBILE*/
 }
