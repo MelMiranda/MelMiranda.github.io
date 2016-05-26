@@ -19,7 +19,8 @@ body{
 
 .description-section h1{
 	margin-bottom: 30px !important;
-        font-size:1em !important;
+        font-size:1.5em !important;
+        font-weight:bold;
 }
 /*HEADER SECTION*/
 
