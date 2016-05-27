@@ -145,7 +145,7 @@ button:hover{
 }
 
 body{
-	background-size: 100% 100%  ;
+	background-size: 100vh 100%  ;
 	background-image: url("fondo2.jpg");
 }
 
@@ -205,7 +205,7 @@ and (orientation : landscape) {
 
 body{
 	background-size:100% 100%;
-	background-image: url("fondo.jpEg");
+	background-image: url("fondo.jpeg");
 	background-attachment: fixed;
 }	
 

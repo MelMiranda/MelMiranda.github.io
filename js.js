@@ -18,11 +18,11 @@ $(document).on("ready",function(){
 function slider(){
 
 var currentIndex = 0,
-  items = $('.description-section div'),
+  items = $('.description-section  div:first-child'),
   itemAmt = items.length;
 
 function cycleItems() {
-  var item = $('.description-section div').eq(currentIndex);
+  var item = $('.description-section  div:first-child').eq(currentIndex);
   items.hide();
   item.fadeIn("slow");
 }
