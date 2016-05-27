@@ -34,8 +34,8 @@ body{
 
 }
 
-.loading-gif{
-	width: 15em;
+.loading-img{
+	width: 10em;
 }
 
 /*HEADER SECTION*/
@@ -65,13 +65,49 @@ body{
 
 /*DESCRIPTION SECTION*/
 
-.list-skills{
-	list-style-image: url("red-icon.png");
+.list-skills li{
+	padding:5px;
+}
+
+.list-skills li:first-child:hover{
+	color:rgba(255,0,0,.5);
+}
+
+.list-skills li:nth-child(2):hover{
+	color: rgba(0,0,255,.5);
+}
+
+.list-skills li:nth-child(3):hover{
+	color: rgba(0,255,0,.5);
+}
+.list-skills li:nth-child(4):hover{
+	color: rgba(196,0,255,0.5);
+}
+
+.list-skills li:nth-child(5):hover{
+	color: rgba(0,192,255,0.5);
+}
+
+.list-skills li:nth-child(6):hover{
+	color: rgba(247,255,0,.5);
+}
+
+.list-skills li:nth-child(7):hover{
+	color: rgba(255,134,0,0.5);
+}
+.list-skills li:nth-child(8):hover{
+	color: rgba(107,228,243,.5);
+}
+
+.list-skills li:nth-child(9):hover{
+	color: rgba(247,199,199,.5);
+}
+
+.list-skills li:nth-child(10):hover{
+	color: rgba(255,0,137,.5);
 }
 
 .list-skills > li:hover {
-	background-color: (255,255,255,1);
-	transition: 1s;
 }
 
 .description-section{
