@@ -145,7 +145,7 @@ button:hover{
 }
 
 body{
-	background-size:100vh  auto ;
+	background-size: 100% 100%  ;
 	background-image: url("fondo2.jpg");
 }
 
@@ -171,7 +171,43 @@ body{
 
 .loading-img{
 	margin-left: 0;
-	width: 15em;
+	width: 10em;
 }
 /*TERMINA MEDIA QUERY MOBILE*/
+}
+
+/*IPAD PORTRAIT*/
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+
+body{
+	background-size:100%  100% ;
+	background-image: url("fondo2.jpg");
+	background-attachment: fixed;
+}
+
+
+
+/* ENDS IPAD PORTRAIT*/ 
+}
+
+
+/*IPAD LANDSCAPE*/
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+
+body{
+	background-size:100% 100%;
+	background-image: url("fondo.jpEg");
+	background-attachment: fixed;
+}	
+
+/* ENDS IPAD LANDSCAPE */
 }
