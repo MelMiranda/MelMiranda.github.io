@@ -145,8 +145,9 @@ button:hover{
 }
 
 body{
-	background-size: 100vh auto   ;
+	background-size: auto 100vh  ;
 	background-image: url("fondo2.jpg");
+	background-attachment: fixed;
 }
 
 .description-section{
