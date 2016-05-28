@@ -94,14 +94,14 @@ body{
 }
 
 .list-skills li:nth-child(7):hover{
-	color: rgba(255,134,0,0.5);
+	color: rgba(241,169,214,1);
 }
 .list-skills li:nth-child(8):hover{
 	color: rgba(107,228,243,.5);
 }
 
 .list-skills li:nth-child(9):hover{
-	color: rgba(247,199,199,.5);
+	color: rgba(247,199,199,1);
 }
 
 .list-skills li:nth-child(10):hover{
@@ -248,4 +248,19 @@ body{
 }	
 
 /* ENDS IPAD LANDSCAPE */
+}
+
+
+/*MEDIA QUERY PARA LG*/
+
+
+
+@media only screen and(min-width:1200px){
+
+
+body{
+	padding:40px;
+}
+
+
 }
