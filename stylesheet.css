@@ -183,7 +183,7 @@ button:hover{
 
 body{
 	background-size: 100vh 100vh  ;
-	background-image: url("fondo-2-mobile.jpg");
+	background-image: url("fondo-2-mobile.JPG");
 	background-attachment: fixed;
 }
 
@@ -224,7 +224,7 @@ and (orientation : portrait) {
 
 body{
 	background-size:100%  100% ;
-	background-image: url("fondo-2-mobile.jpg");
+	background-image: url("fondo-2-mobile.JPG");
 	background-attachment: fixed;
 }
 
@@ -243,7 +243,7 @@ and (orientation : landscape) {
 
 body{
 	background-size:100% 100%;
-	background-image: url("fondo-2-mobile.jpeg");
+	background-image: url("fondo-2.JPG");
 	background-attachment: fixed;
 }	
 
