@@ -132,12 +132,9 @@ body{
 }
 
 button{
-	background-size: 100% 100%;;
-	/*border:.5px solid gray;*/
+	background-size: 100% 100%;
 	width: 40px;
 	height: 40px;
-	/*border-radius: 100%;*/
-	opacity:.9;	
 	margin:0px 20px;
 	background-color: transparent;
 	box-shadow: none;
@@ -145,17 +142,17 @@ button{
 }
 
 button:hover{
-	opacity:.7;
-	transition:1s;
+	opacity:.5;
+	
 }
 
 .next{
-	background-image: url("test-next.png");
+	background-image: url("next-button-2.png");
 	margin:0 20px;
 }
 
 .prev{
-	background-image: url("prev-button.png");
+	background-image: url("prev-button-2.png");
 	margin:0 20px;
 }
 
@@ -186,7 +183,7 @@ button:hover{
 
 body{
 	background-size: 100vh 100vh  ;
-	background-image: url("fondo2.jpg");
+	background-image: url("fondo-2-mobile.jpg");
 	background-attachment: fixed;
 }
 
@@ -227,7 +224,7 @@ and (orientation : portrait) {
 
 body{
 	background-size:100%  100% ;
-	background-image: url("fondo2.jpg");
+	background-image: url("fondo-2-mobile.jpg");
 	background-attachment: fixed;
 }
 
@@ -246,7 +243,7 @@ and (orientation : landscape) {
 
 body{
 	background-size:100% 100%;
-	background-image: url("fondo.jpeg");
+	background-image: url("fondo-2-mobile.jpeg");
 	background-attachment: fixed;
 }	
 
