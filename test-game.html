@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <title> Melania Miranda </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Melania Miranda, Desarrollo Web, Diseño Web, Freelance, Web Designer, fotografia, ingenieria, sistemas, Solange, Melania, Github Melania Miranda, developer">
+
+    <meta name="author" content="Melania Miranda">
+    <link rel="shortcut icon" href="icon-page.png" type="image/png">
+    
+   <!--  <link rel="shortcut icon" href="/favicon.ico" /> -->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
+    
+    <script src="jquery-1.12.4.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/npm.js"></script>
+    <script src="js.js"></script>
+
+
+
+	<style>
+		
+		.test-1{
+		 background-color: red;
+		 
+
+		}
+
+		.test-2{
+			background-color: blue;
+			
+			
+		}
+	</style>
+</head>
+<body>
+
+
+<section style="padding:200px 200px;">
+		
+<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+	<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 test-1 square"></div>
+	<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 test-2 square"></div>
+	<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 test-1 square"></div>
+	<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 test-2 square"></div>
+	<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 test-2 square"></div>
+	<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 test-1 square"></div>
+	<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 test-2 square"></div>
+	<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 test-1 square"></div>
+	<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 test-1 square"></div>
+	<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 test-2 square"></div>
+	<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 test-1 square"></div>
+	<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 test-2 square"></div>
+	<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 test-2 square"></div>
+	<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 test-1 square"></div>
+	<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 test-2 square"></div>
+	<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 test-1 square"></div>
+</div>
+
+
+	</section>
+
+
+<script>
+
+$(document).on("ready",function(){
+	AdaptSquare();
+
+	});
+		 
+	
+
+	
+function AdaptSquare(){
+
+	var ancho = $('.square').outerWidth();
+
+  $('.square').css('height', ancho+"px");
+
+  $(".box-producir-2 > div > div > p" ).each(function( index ) {
+
+  	 var alto_div = ancho;
+  	 var alto_parrafo = $(this).height();
+
+  	 var alto=((alto_div/2)-(alto_parrafo/2));
+
+  	 console.log("alto "+alto);
+   	$(this).css("margin-top", alto+"px" );
+
+  });
+}
+
+</script>	
+</body>
+</html>
+
+
