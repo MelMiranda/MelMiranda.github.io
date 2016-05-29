@@ -41,7 +41,7 @@
 <body>
 
 
-<section style="padding:200px 200px;">
+<section style="padding:50px 300px;">
 		
 <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
 	<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 test-1 square"></div>
@@ -80,19 +80,24 @@ function AdaptSquare(){
 
 	var ancho = $('.square').outerWidth();
 
-  $('.square').css('height', ancho+"px");
 
-  $(".box-producir-2 > div > div > p" ).each(function( index ) {
+  $(".square" ).each(function( index ) {
 
-  	 var alto_div = ancho;
-  	 var alto_parrafo = $(this).height();
+  	 $('.square').css('height', ancho+"px");
 
-  	 var alto=((alto_div/2)-(alto_parrafo/2));
-
-  	 console.log("alto "+alto);
-   	$(this).css("margin-top", alto+"px" );
+  	 console.log("ancho "+ancho);
+   	
 
   });
+}
+
+
+
+function activityOne(){
+
+
+
+
 }
 
 </script>	
