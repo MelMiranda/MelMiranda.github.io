@@ -5,11 +5,11 @@
 
 body{
 	background-image: url("fondo-2.JPG");
-	background-size: cover;
+	/*background-size: cover;*/
 	margin: 0 !important; padding: 0 !important;
 	background-repeat: no-repeat;
 	background-color:rgba(99,99,99,.3);
-	background-attachment: fixed;
+	/*background-attachment: fixed;*/
 
 }
 
