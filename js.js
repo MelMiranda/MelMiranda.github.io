@@ -64,3 +64,7 @@ function loading(){
   $(".loading").fadeOut("");
 
 }
+
+
+
+
