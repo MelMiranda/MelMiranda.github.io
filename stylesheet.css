@@ -10,7 +10,7 @@ body{
 	background-repeat: no-repeat;
 	background-color:rgba(99,99,99,.3);
 	background-position: center;
-	
+
 
 	/*background-attachment: fixed;*/
 
@@ -51,7 +51,7 @@ body{
 }
 
 .header-inner{
-	font-size: 2em;
+font-size: 2em;
   padding: 20px 5px;
   color: white;
 }
@@ -181,14 +181,12 @@ button:hover{
 @media screen and (max-width: 767px){
 
 .header-section{
-  height: 22rem;
+  height: 20rem;
 }
 
-/*body{
-	background-size: 100vh 100vh  ;
-	background-image: url("fondo-2-mobile.JPG");
-	background-attachment: fixed;
-}*/
+.button-section{
+	margin-bottom: 0;
+}
 
 .description-section{
 	padding: 0px 50px !important;
@@ -202,8 +200,8 @@ button:hover{
 
 .imagen-perfil{
 
-  width: 4.5em;
-  height: 4.5em;
+  width: 4em;
+  height: 4em;
 }
 .loading{
     width: 50%;
@@ -214,6 +212,22 @@ button:hover{
 	margin-left: 0;
 	width: 10em;
 }
+
+.header-inner{
+  padding: 10px 5px;
+}
+
+.header-inner > p{
+ margin:0;
+}
+
+
+/*body{
+	background-size: 100vh 100vh  ;
+	background-image: url("fondo-2-mobile.JPG");
+	background-attachment: fixed;
+}*/
+
 /*TERMINA MEDIA QUERY MOBILE*/
 }
 
