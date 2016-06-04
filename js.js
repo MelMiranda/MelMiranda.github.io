@@ -67,7 +67,61 @@ function loading(){
 }
 
 
+// FUNCION QUE AJUSTA EL ANCHO DEL BACKGROUND SIN DEFORMAR
 function fitBackground(){
+
+  var img = new Image ;
+  img.src = $('body').css('background-image').replace("url(", "").replace(")", "").replace("\"", "").replace("\"", "");
+  $(img).load(function() {
+    var bgWidth = img.width;
+    var bgHeight = img.height;
+
+    console.log("wbg:"+bgWidth+"  hbg:"+bgHeight) ;
+
+    var wdHeight = $(window).height();
+  var wdWidth = $(window).width();
+
+  console.log("wWd:"+wdWidth+"  hWd:"+wdHeight ) ;
+
+if( (wdWidth-wdHeight) > 0 ){
+     // if que determina si la pantalla es mas ancha que alta
+    console.log("pantalla mas ancha que alta");
+
+    if( (wdWidth- wdHeight) > (bgWidth-bgHeight) ){
+
+      $("body").css("background-size","100% auto");
+ 
+     }else{
+
+
+         $("body").css("background-size"," auto  100%");
+ 
+     };
+  
+   }else{ 
+       console.log("pantalla mas alta que ancha");
+
+       if( (wdHeight- wdWidth) > (bgHeight-bgWidth) ){
+
+      $("body").css("background-size"," auto 100%");
+ 
+     }else{
+
+
+         $("body").css("background-size","100%  auto");
+ 
+     };
+
+   }
+     
+   }) ;
+ 
+   
+ };
+
+// TERMINA FUNCION 
+
+function fitBackgroundtest(){
 
   var img = new Image ;
   img.src = $('body').css('background-image').replace("url(", "").replace(")", "").replace("\"", "").replace("\"", "");
