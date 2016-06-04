@@ -183,11 +183,11 @@ button:hover{
   height: 22rem;
 }
 
-body{
+/*body{
 	background-size: 100vh 100vh  ;
 	background-image: url("fondo-2-mobile.JPG");
 	background-attachment: fixed;
-}
+}*/
 
 .description-section{
 	padding: 0px 50px !important;
