@@ -15,7 +15,7 @@ $(document).on("ready",function(){
     fitBackground();
 } );
 
-// LISTA DE FUNCIONES 
+// LISTA DE FUNCIONES
 
 function slider(){
 
@@ -91,36 +91,36 @@ if( (wdWidth-wdHeight) > 0 ){
     if( (wdWidth- wdHeight) > (bgWidth-bgHeight) ){
 
       $("body").css("background-size","100% auto");
- 
+
      }else{
 
 
          $("body").css("background-size"," auto  100%");
- 
+
      };
-  
-   }else{ 
+
+   }else{
        console.log("pantalla mas alta que ancha");
 
        if( (wdHeight- wdWidth) > (bgHeight-bgWidth) ){
 
       $("body").css("background-size"," auto 100%");
- 
+
      }else{
 
 
          $("body").css("background-size","100%  auto");
- 
+
      };
 
    }
-     
+
    }) ;
- 
-   
+
+
  };
 
-// TERMINA FUNCION 
+// TERMINA FUNCION
 
 function fitBackgroundtest(){
 
@@ -137,7 +137,7 @@ function fitBackgroundtest(){
 
   console.log("wWd:"+wdWidth+"  hWd:"+wdHeight ) ;
 
-  
+
 
   if( (wdWidth-wdHeight) > 0 ){
     // if que determina si la pantalla es mas ancha que alta
@@ -153,8 +153,8 @@ function fitBackgroundtest(){
         $("body").css("background-size", aux+"% auto");
 
     };
-  
-  }else{ 
+
+  }else{
       console.log("pantalla mas alta que ancha");
        if( wdWidth > bgWidth){
         var aux = ((100/wdWidth) * bgWidth)+100;
@@ -167,10 +167,10 @@ function fitBackgroundtest(){
         console.log("se ajusto alto2");
     };
   }
-    
+
   }) ;
 
-  
+
 };
 
 
@@ -211,19 +211,18 @@ function ajustarAlto(){
 function ResetHeight(){
     var id=1;
     while($( "[hid="+id+"]" ).length||id<20){
-      
+
       $("[hid="+id+"]").css("height","auto");
       id++;
     }
   }
-  
+
   var headerHeight=0;
   var distanceHeader=0;
   SetDistanceHeader();
-  
+
   function SameHeight(){
     //console.log("entra same height");
-    
     var auxId=1;
     while($( "[hid="+auxId+"]" ).length||auxId<20){
       var hidHeight=0;
@@ -232,7 +231,7 @@ function ResetHeight(){
         if($(this).innerHeight()>hidHeight){
           hidHeight= $(this).innerHeight();
         }
-        
+
       });
       //console.log(hidHeight);
       $("[hid="+auxId+"]").css("height",hidHeight+"px");
