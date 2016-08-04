@@ -60,13 +60,27 @@ font-size: 2em;
 
 .imagen-perfil{
   border-radius: 100%;
-  border: 3px solid gray;
+  border: 3px solid white;
   width: 200px;
   height: 200px;
   margin-bottom: 20px;
 }
 
 /*DESCRIPTION SECTION*/
+li a:first-child{
+	color:rgba(244,67,54,.66);
+}
+li a:first-child:hover{
+	color:rgba(244,67,54,1);
+	text-decoration: none;
+}
+li a:last-child{
+	color:rgba(74,171,255,.66);
+}
+li a:last-child:hover{
+	color:rgba(74,171,255,1);
+	text-decoration: none;
+}
 
 .list-skills li{
 	padding:5px 5px;
@@ -142,11 +156,12 @@ button{
 	background-color: transparent;
 	box-shadow: none;
 	border: none;
+	outline: none;
 }
 
 button:hover{
 	opacity:.5;
-	
+
 }
 
 .next{
@@ -234,10 +249,10 @@ button:hover{
 /*IPAD PORTRAIT*/
 
 
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) { 
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
 
 /*body{
 	background-size:100%  100% ;
@@ -247,16 +262,16 @@ and (orientation : portrait) {
 */
 
 
-/* ENDS IPAD PORTRAIT*/ 
+/* ENDS IPAD PORTRAIT*/
 }
 
 
 /*IPAD LANDSCAPE*/
 
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) { 
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
 
 /*body{
 	background-size:100% 100%;
