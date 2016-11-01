@@ -55,14 +55,14 @@ $('.prev').click(function() {
   cycleItems();
 });
 
- console.log("checkpoint-2");
+ //console.log("checkpoint-2");
 }
 
 
 
 function loading(){
 
-  console.log("checkpoint-4");
+ // console.log("checkpoint-4");
   $(".loading").fadeOut("");
 
 }
@@ -77,16 +77,16 @@ function fitBackground(){
     var bgWidth = img.width;
     var bgHeight = img.height;
 
-    console.log("wbg:"+bgWidth+"  hbg:"+bgHeight) ;
+ //   console.log("wbg:"+bgWidth+"  hbg:"+bgHeight) ;
 
     var wdHeight = $(window).height();
   var wdWidth = $(window).width();
 
-  console.log("wWd:"+wdWidth+"  hWd:"+wdHeight ) ;
+  //console.log("wWd:"+wdWidth+"  hWd:"+wdHeight ) ;
 
 if( (wdWidth-wdHeight) > 0 ){
      // if que determina si la pantalla es mas ancha que alta
-    console.log("pantalla mas ancha que alta");
+   // console.log("pantalla mas ancha que alta");
 
     if( (wdWidth- wdHeight) > (bgWidth-bgHeight) ){
 
@@ -100,7 +100,7 @@ if( (wdWidth-wdHeight) > 0 ){
      };
 
    }else{
-       console.log("pantalla mas alta que ancha");
+     //  console.log("pantalla mas alta que ancha");
 
        if( (wdHeight- wdWidth) > (bgHeight-bgWidth) ){
 
@@ -130,18 +130,18 @@ function fitBackgroundtest(){
     var bgWidth = img.width;
     var bgHeight = img.height;
 
-    console.log("wbg:"+bgWidth+"  hbg:"+bgHeight) ;
+    // console.log("wbg:"+bgWidth+"  hbg:"+bgHeight) ;
 
     var wdHeight = $(window).height();
   var wdWidth = $(window).width();
 
-  console.log("wWd:"+wdWidth+"  hWd:"+wdHeight ) ;
+  // console.log("wWd:"+wdWidth+"  hWd:"+wdHeight ) ;
 
 
 
   if( (wdWidth-wdHeight) > 0 ){
     // if que determina si la pantalla es mas ancha que alta
-   console.log("pantalla mas ancha que alta");
+   //console.log("pantalla mas ancha que alta");
    if( wdHeight > bgHeight){
         var aux = (100/wdHeight) * bgHeight;
 
@@ -155,16 +155,16 @@ function fitBackgroundtest(){
     };
 
   }else{
-      console.log("pantalla mas alta que ancha");
+     // console.log("pantalla mas alta que ancha");
        if( wdWidth > bgWidth){
         var aux = ((100/wdWidth) * bgWidth)+100;
         $('body').css("background-size", "auto"+ aux + "%" );
-        console.log("se ajusto alto1");
+       // console.log("se ajusto alto1");
 
         }else{
         var aux = ((100/bgWidth) * wdWidth)+100;
         $('body').css("background-size", "auto"+ aux +"%" );
-        console.log("se ajusto alto2");
+        //console.log("se ajusto alto2");
     };
   }
 
@@ -180,12 +180,12 @@ function ajustarAncho(){
         var aux = (100/bgHeight) * wdHeight;
         $("body").css("background-size", +100+aux+ "% auto");
 
-        console.log("se ajusto ancho1");
+        //console.log("se ajusto ancho1");
 
     }else{
         var aux = (100/wdHeight) * bgHeight;
         $('body').css('background-size', +100+aux+"% auto");
-        console.log("se ajusto ancho2");
+      //  console.log("se ajusto ancho2");
     };
 
 };
@@ -197,12 +197,12 @@ function ajustarAlto(){
        if( wdWidth > bgWidth){
         var aux = ((100/wdWidth) * bgWidth)+100;
         $('body').css('background-size', "auto"+ aux + "%" );
-        console.log("se ajusto alto");
+       // console.log("se ajusto alto");
 
         }else{
         var aux = ((100/bgWidth) * wdWidth)+100;
         $('body').css('background-size', "auto"+ aux+"%" );
-        console.log("se ajusto alto");
+     //   console.log("se ajusto alto");
     };
 
 };
