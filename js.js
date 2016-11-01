@@ -219,7 +219,7 @@ function ResetHeight(){
 
   var headerHeight=0;
   var distanceHeader=0;
-  SetDistanceHeader();
+  //SetDistanceHeader();
 
   function SameHeight(){
     //console.log("entra same height");
