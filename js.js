@@ -1,6 +1,8 @@
 // DOCUMENTO CARGANDO
 
 $(window).on("load",function(){
+ 
+ console.log('%c Welcome!! ', 'background: #222; color: #bada55');
 
  loading();
   SameHeight();
