@@ -239,13 +239,13 @@ button:hover{
   width: 4em;
   height: 4em;
 }
-.loading{
+/*.loading{
     width: 50%;
     margin: 30% 25%;
-}
+}*/
 
 .loading-img{
-	margin-left: 0;
+	/*margin-left: 50vw	;*/
 	width: 10em;
 }
 

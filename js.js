@@ -2,7 +2,7 @@
 
 $(window).on("load",function(){
 
- console.log('%c Welcome!! This is Melania ', 'background: #222; color: #bada55');
+ console.log('%c Welcome!! This is Melania ', 'background: #FFF; color: #F00');
 
  loading();
   SameHeight();
@@ -64,7 +64,15 @@ $('.prev').click(function() {
 
 function loading(){
 
- // console.log("checkpoint-4");
+  var anchoIcono =$(".loading").width();
+  var anchoPagina =$( window ).width();
+  console.log(anchoIcono);
+  console.log(anchoPagina);
+  var total = anchoPagina/2 - anchoIcono/2;
+  // total =700
+  $(".loading").css('margin-left', total+'px');
+
+ console.log(total+'px');
   $(".loading").fadeOut("");
 
 }
