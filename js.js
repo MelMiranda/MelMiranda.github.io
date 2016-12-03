@@ -1,8 +1,8 @@
 // DOCUMENTO CARGANDO
 
 $(window).on("load",function(){
- 
- console.log('%c Welcome!! ', 'background: #222; color: #bada55');
+
+ console.log('%c Welcome!! This is Melania ', 'background: #222; color: #bada55');
 
  loading();
   SameHeight();

@@ -1,5 +1,9 @@
 /*GENERAL DATA*/
 
+@font-face {
+    font-family: 'Trebuchet'
+    src: url('TrebuchetMS.ttf');
+}
 
 *{ margin: 0; padding: 0;}
 
@@ -54,9 +58,16 @@ body{
 font-size: 2em;
   padding: 20px 5px;
   color: white;
+	/*font-family: 'Trebuchet'*/
 }
 
+/*p{
+	font-family:'Trebuchet';
+}*/
 
+#icono-m{
+		width: 50%;
+}
 
 .imagen-perfil{
   border-radius: 100%;
@@ -189,7 +200,15 @@ button:hover{
 */
 
 
+/*MEDIA QUERY PARA MOBILE LANDSCAPE*/
 
+@media screen and (max-width: 767px) and (orientation : landscape) {
+
+	#icono-m{
+			width: 30%;
+	}
+
+}
 
 /*MEDIA QUERY PARA MOBILE*/
 
@@ -198,6 +217,8 @@ button:hover{
 .header-section{
   height: 20rem;
 }
+
+
 
 .button-section{
 	margin-bottom: 0;
