@@ -238,6 +238,8 @@ button:hover{
   }
   .header-inner{
     margin-top: 0%;
+    padding-right:0;
+    padding-left: 0;
   }
 
 .header-section{
@@ -276,7 +278,9 @@ button:hover{
 }
 
 .header-inner{
-  padding: 10px 5px;
+  padding: 0px 5px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .header-inner > p{
