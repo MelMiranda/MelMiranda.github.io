@@ -88,17 +88,17 @@ font-size: 1.8em;
 }
 
 /*DESCRIPTION SECTION*/
-li a:first-child{
+.window-3 li .blue{
 	color:rgba(244,67,54,.66);
 }
-li a:first-child:hover{
+.window-3 li  .blue:hover{
 	color:rgba(244,67,54,1);
 	text-decoration: none;
 }
-li a:last-child{
+.window-3 li .red{
 	color:rgba(74,171,255,.66);
 }
-li a:last-child:hover{
+.window-3 li  .red:hover{
 	color:rgba(74,171,255,1);
 	text-decoration: none;
 }
@@ -156,8 +156,12 @@ li a:last-child:hover{
 
 }
 
-.window-1, .window-2, .window-3{
+.window-1, .window-2, .window-3, .window-4{
  	display: none;
+}
+
+.window-3 > li {
+  list-style: none !important;
 }
 
 
