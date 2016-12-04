@@ -8,7 +8,7 @@
 *{ margin: 0; padding: 0;}
 
 body{
-	background-image: url("fondo-2.JPG");
+	background-image: url("img/fondo-2.JPG");
 	/*background-size: cover;*/
 	margin: 0 !important; padding: 0 !important;
 	background-repeat: no-repeat;
@@ -28,6 +28,11 @@ body{
 	margin-bottom: 30px;
 	font-size: 1.5em;
 	font-weight: bold;
+}
+
+.description-section h2{
+	font-size: 1.3em;
+	font-weight: 100;;
 }
 
 
@@ -54,11 +59,16 @@ body{
   text-align: center;
 }
 
-.header-inner{
-font-size: 2em;
+.header-inner p{
+font-size: 1.8em;
   padding: 20px 5px;
   color: white;
+  letter-spacing: 2px;
 	/*font-family: 'Trebuchet'*/
+}
+
+.header-inner{
+  margin-top: 25%;
 }
 
 /*p{
@@ -176,12 +186,12 @@ button:hover{
 }
 
 .next{
-	background-image: url("next-button-2.png");
+	background-image: url("img/next-button-2.png");
 	margin:0 20px;
 }
 
 .prev{
-	background-image: url("prev-button-2.png");
+	background-image: url("img/prev-button-2.png");
 	margin:0 20px;
 }
 
@@ -189,15 +199,22 @@ button:hover{
 
 /*SECTION SOCIAL*/
 
-.socialimg{
-	width: 50px;
+.socialimg-1, .socialimg-2, .socialimg-3{
 	margin-right: 10px;
+  color: black;
 }
 
-/*.socialimg:hover{
-	opacity: .5;
+.socialimg-1:hover{
+	color: rgba(0, 86, 255, 0.7);
 }
-*/
+
+.socialimg-2:hover{
+	color: rgba(230, 57, 166, 0.7);
+}
+.socialimg-3:hover{
+	color: rgba(76, 175, 80, 0.7);
+}
+
 
 
 /*MEDIA QUERY PARA MOBILE LANDSCAPE*/
@@ -208,11 +225,20 @@ button:hover{
 			width: 30%;
 	}
 
+
+
 }
 
 /*MEDIA QUERY PARA MOBILE*/
 
 @media screen and (max-width: 767px){
+
+  .socialimg-1, .socialimg-2, .socialimg-3{
+    color: white;
+  }
+  .header-inner{
+    margin-top: 0%;
+  }
 
 .header-section{
   height: 20rem;
@@ -225,7 +251,7 @@ button:hover{
 }
 
 .description-section{
-	padding: 0px 50px !important;
+	padding: 0px 40px !important;
 	margin-bottom: 20px;
 }
 
