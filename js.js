@@ -92,20 +92,20 @@ function fitBackground(){
     var bgWidth = img.width;
     var bgHeight = img.height;
 
-    console.log("wbg:"+bgWidth+"  hbg:"+bgHeight) ;
+   // console.log("wbg:"+bgWidth+"  hbg:"+bgHeight) ;
 
     var wdHeight = $(window).height();
 	var wdWidth = $(window).width();
 	var docHeight = $(document).height();
 	var docWidth = $(document).width();
 
-	console.log("WdWin:"+wdWidth+"  heiWin:"+wdHeight ) ;
-	console.log("WdDoc:"+docWidth+"  heiDoc:"+docHeight ) ;
+	//console.log("WdWin:"+wdWidth+"  heiWin:"+wdHeight ) ;
+	//console.log("WdDoc:"+docWidth+"  heiDoc:"+docHeight ) ;
 
 if( (wdWidth-wdHeight) > 0 ){
 
      // if que determina si la pantalla es mas ancha que alta
-    console.log("pantalla mas ancha que alta");
+    //console.log("pantalla mas ancha que alta");
 
   if( (wdWidth- wdHeight) > (bgWidth-bgHeight)){
 
@@ -114,14 +114,14 @@ if( (wdWidth-wdHeight) > 0 ){
 
 						if(bgHeight < wdHeight){
 							$(".bg-fit").css("background-size","auto 100%  ");
-							console.log("pantalla0");
+							//console.log("pantalla0");
 						}else{
 							$(".bg-fit").css("background-size","100% auto ");
-							console.log("pantalla 0.5");
+							//console.log("pantalla 0.5");
 						}
 					}else {
 								$(".bg-fit").css("background-size","100% auto");
-								console.log("DOCUMENTO IGUAL");
+							//	console.log("DOCUMENTO IGUAL");
 					};
 
 
@@ -133,10 +133,10 @@ if( (wdWidth-wdHeight) > 0 ){
 
 						if(bgHeight < wdHeight){
 							$(".bg-fit").css("background-size","auto 100%  ");
-							console.log("pantalla1");
+							
 						}else{
 							$(".bg-fit").css("background-size","100% auto ");
-							console.log("pantalla 2");
+							
 						}
 										// $("#home").css("background-size","auto 100% ");
 										// console.log("pantalla1");
@@ -146,14 +146,15 @@ if( (wdWidth-wdHeight) > 0 ){
 
 						if(docHeight > bgHeight){
 								$(".bg-fit").css("background-size","auto  100% ");
-								console.log("pantalla3");
+								//console.log("pantalla3");
 						}else{
 								if(bgHeight < wdHeight){
 									$(".bg-fit").css("background-size","auto 100%  ");
-									console.log("pantalla4");
+									//console.log("pantalla4");
 								}else{
 									$(".bg-fit").css("background-size","130% auto ");
-									console.log("pantalla 5");
+									
+									//console.log("pantalla 5");
 
 								}
 
@@ -168,7 +169,7 @@ if( (wdWidth-wdHeight) > 0 ){
    }else{
        console.log("pantalla mas alta que ancha");
 
-       if( (wdHeight- wdWidth) > (bgHeight-bgWidth) ){
+       if( (docHeight- docWidth) > (bgHeight-bgWidth) ){
 
 
     	$(".bg-fit").css("background-size"," auto 100%");
