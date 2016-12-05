@@ -5,6 +5,17 @@
     src: url('TrebuchetMS.ttf');
 }
 
+footer{
+  position: absolute;
+  bottom:0;
+  text-align: center;
+  color: #928d8d;
+  font-family: 'Trebuchet';
+  left: 0;
+right: 0;
+font-size: .9em;
+}
+
 *{ margin: 0; padding: 0;}
 
 body{
@@ -33,8 +44,9 @@ body{
 
 .description-section h2{
 	font-size: 1.3em;
-	font-weight: 100;;
+	font-weight: 100;
 }
+
 
 
 .loading{
@@ -165,6 +177,10 @@ font-size: 1.8em;
   list-style: none !important;
 }
 
+.window-1{
+  padding-bottom: 30px;
+}
+
 
 
 /*BUTTON SECTION*/
@@ -292,6 +308,9 @@ button:hover{
  margin:0;
 }
 
+.description-section h2 span{
+display: none;
+}
 
 /*body{
 	background-size: 100vh 100vh  ;
