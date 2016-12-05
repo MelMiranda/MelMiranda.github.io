@@ -9,9 +9,9 @@ $(window).on("load",function(){
 
 });
 
-//$( window ).resize(function() {
-//   fitBackground();
-//});
+$( window ).resize(function() {
+  fitBackground();
+});
 
 
 // DOCUMENTO LISTO
