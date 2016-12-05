@@ -76,48 +76,103 @@ function loading(){
 }
 
 
-// FUNCION QUE AJUSTA EL ANCHO DEL BACKGROUND SIN DEFORMAR
 function fitBackground(){
 
-  var img = new Image ;
-  img.src = $('body').css('background-image').replace("url(", "").replace(")", "").replace("\"", "").replace("\"", "");
-  $(img).load(function() {
+	var img = new Image ;
+	try{
+		img.src = $('.bg-fit').css('background-image').replace("url(", "").replace(")", "").replace("\"", "").replace("\"", "");
+	}catch(err){
+
+	}
+	$(img).load(function() {
     var bgWidth = img.width;
     var bgHeight = img.height;
 
- //   console.log("wbg:"+bgWidth+"  hbg:"+bgHeight) ;
+    console.log("wbg:"+bgWidth+"  hbg:"+bgHeight) ;
 
     var wdHeight = $(window).height();
-  var wdWidth = $(window).width();
+	var wdWidth = $(window).width();
+	var docHeight = $(document).height();
+	var docWidth = $(document).width();
 
-  //console.log("wWd:"+wdWidth+"  hWd:"+wdHeight ) ;
+	console.log("WdWin:"+wdWidth+"  heiWin:"+wdHeight ) ;
+	console.log("WdDoc:"+docWidth+"  heiDoc:"+docHeight ) ;
 
 if( (wdWidth-wdHeight) > 0 ){
+
      // if que determina si la pantalla es mas ancha que alta
-   // console.log("pantalla mas ancha que alta");
+    console.log("pantalla mas ancha que alta");
 
-    if( (wdWidth- wdHeight) > (bgWidth-bgHeight) ){
-
-      $("body").css("background-size","100% auto");
-
-     }else{
+  if( (wdWidth- wdHeight) > (bgWidth-bgHeight)){
 
 
-         $("body").css("background-size"," auto  100%");
+					if(docHeight > wdHeight){
 
-     };
+						if(bgHeight < wdHeight){
+							$(".bg-fit").css("background-size","auto 100%  ");
+							console.log("pantalla0");
+						}else{
+							$(".bg-fit").css("background-size","100% auto ");
+							console.log("pantalla 0.5");
+						}
+					}else {
+								$(".bg-fit").css("background-size","100% auto");
+								console.log("DOCUMENTO IGUAL");
+					};
+
+
+    }else{
+
+			// LA PARTE APAISADA TIENE QUE ENTRAR ACA
+
+			 		if(docHeight > wdHeight) {
+
+						if(bgHeight < wdHeight){
+							$(".bg-fit").css("background-size","auto 100%  ");
+							console.log("pantalla1");
+						}else{
+							$(".bg-fit").css("background-size","100% auto ");
+							console.log("pantalla 2");
+						}
+										// $("#home").css("background-size","auto 100% ");
+										// console.log("pantalla1");
+
+
+					}else{
+
+						if(docHeight > bgHeight){
+								$(".bg-fit").css("background-size","auto  100% ");
+								console.log("pantalla3");
+						}else{
+								if(bgHeight < wdHeight){
+									$(".bg-fit").css("background-size","auto 100%  ");
+									console.log("pantalla4");
+								}else{
+									$(".bg-fit").css("background-size","130% auto ");
+									console.log("pantalla 5");
+
+								}
+
+						};
+
+				 };
+	};
+
+//  ELSE QUE CALCULA EL ALTO
+
 
    }else{
-     //  console.log("pantalla mas alta que ancha");
+       console.log("pantalla mas alta que ancha");
 
        if( (wdHeight- wdWidth) > (bgHeight-bgWidth) ){
 
-      $("body").css("background-size"," auto 100%");
+
+    	$(".bg-fit").css("background-size"," auto 100%");
 
      }else{
 
 
-         $("body").css("background-size","100%  auto");
+         $(".bg-fit").css("background-size","100%  auto");
 
      };
 
@@ -128,7 +183,6 @@ if( (wdWidth-wdHeight) > 0 ){
 
  };
 
-// TERMINA FUNCION
 
 function fitBackgroundtest(){
 
