@@ -167,11 +167,11 @@ if( (wdWidth-wdHeight) > 0 ){
 
 
    }else{
-       console.log("pantalla mas alta que ancha");
+       //console.log("pantalla mas alta que ancha");
 
-       if( (docHeight- docWidth) > (bgHeight-bgWidth) ){
+       if( (docHeight- docWidth) < (bgHeight-bgWidth) ){
 
-
+	
     	$(".bg-fit").css("background-size"," auto 100%");
 
      }else{
