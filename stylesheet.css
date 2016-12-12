@@ -1,8 +1,37 @@
 /*GENERAL DATA*/
+@viewport{
+    zoom: 1.0;
+    width: device-width;
+}
+
+@-ms-viewport{
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
 
 @font-face {
     font-family: 'Trebuchet'
     src: url('TrebuchetMS.ttf');
+}
+
+@font-face {
+    font-family: 'AbelRegular';
+    src:
+        url('Abel-Regular.ttf');
+
+
+}
+
+@font-face {
+    font-family: 'arialregular';
+    src: url('fonts/arial-webfont.eot');
+    src: url('fonts/arial-webfont.eot?#iefix') format('embedded-opentype'),
+      //  url('fonts/arial-webfont.woff2') format('woff2'),
+         url('fonts/arial-webfont.woff') format('woff'),
+         url('fonts/arial-webfont.ttf') format('truetype'),
+         url('fonts/arial-webfont.svg#arialregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 footer{
@@ -10,10 +39,10 @@ footer{
   bottom:0;
   text-align: center;
   color: #928d8d;
-  font-family: 'Trebuchet';
+  font-family: 'AbelRegular';
   left: 0;
 right: 0;
-font-size: .9em;
+font-size: 1em;
 }
 
 *{ margin: 0; padding: 0;}
@@ -40,11 +69,13 @@ body{
 	margin-bottom: 30px;
 	font-size: 1.5em;
 	font-weight: bold;
+  font-family:'AbelRegular';
 }
 
 .description-section h2{
 	font-size: 1.3em;
 	font-weight: 100;
+  font-family:'AbelRegular';
 }
 
 
@@ -77,16 +108,16 @@ font-size: 1.8em;
   padding: 20px 5px;
   color: white;
   letter-spacing: 2px;
-	/*font-family: 'Trebuchet'*/
+	font-family: 'AbelRegular'
 }
 
 .header-inner{
   margin-top: 25%;
 }
 
-/*p{
-	font-family:'Trebuchet';
-}*/
+p{
+	font-family:'AbelRegular';
+}
 
 #icono-m{
 		width: 50%;
@@ -118,6 +149,7 @@ font-size: 1.8em;
 
 .list-skills li{
 	padding:5px 5px;
+  font-family:'AbelRegular';
 
 }
 
@@ -171,6 +203,7 @@ font-size: 1.8em;
 
 .window-1, .window-2, .window-3, .window-4{
  	display: none;
+  font-family:'Trebuchet';
 }
 
 .window-3 > li {
