@@ -34,6 +34,13 @@
     font-style: normal;
 }
 
+@keyframes logo-animation {
+    0%   {filter:blur(20px);}
+    25%  {filter:blur(0px)}
+    50%  {filter:blur(10px);}
+    100% {filter:blur(0px);}
+}
+
 footer{
   position: absolute;
   bottom:0;
@@ -121,6 +128,9 @@ p{
 
 #icono-m{
 		width: 50%;
+    filter:blur(0px);
+    animation-name: logo-animation;
+    animation-duration: 4s;
 }
 
 .imagen-perfil{
@@ -253,7 +263,7 @@ button:hover{
 
 /*SECTION SOCIAL*/
 
-.socialimg-1, .socialimg-2, .socialimg-3{
+.socialimg-1, .socialimg-2, .socialimg-3, .socialimg-4, .socialimg-5{
 	margin-right: 10px;
   color: black;
 }
@@ -268,6 +278,15 @@ button:hover{
 .socialimg-3:hover{
 	color: rgba(76, 175, 80, 0.7);
 }
+
+.socialimg-4:hover{
+	color: rgba(255, 137, 0, 0.7);
+}
+
+.socialimg-5:hover{
+	color: rgba(220, 49, 47, 0.7);
+}
+
 
 
 
@@ -287,7 +306,7 @@ button:hover{
 
 @media screen and (max-width: 767px){
 
-  .socialimg-1, .socialimg-2, .socialimg-3{
+  .socialimg-1, .socialimg-2, .socialimg-3, .socialimg-4, .socialimg-5{
     color: white;
   }
   .header-inner{
