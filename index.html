@@ -23,6 +23,7 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="bootstrap/js/npm.js"></script>
+    <script src="typed.js"></script>
     <script src="js.js"></script>
 
 
@@ -66,7 +67,7 @@ LOADING GIF -->
 
   <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 header-inner">
   <img  id="icono-m" src="img/icon-page.png" alt="selfIcon" />
-  <p>Hi, I'm Melania Miranda</p>
+  <p> <span id="dinamic-content">Hi, I'm </span>Melania Miranda</p>
   </div>
 
 
@@ -213,6 +214,29 @@ LOADING GIF -->
 <!-- <div class="fb-follow" style="position:fixed; bottom:10px; left:10px;" data-href="https://www.facebook.com/melaniamiranda" data-width="5px" data-layout="button_count" data-show-faces="true"> -->
 
 <footer> {M} · Melania Miranda © 2016</footer>
+
+<script>
+
+$(document).on("ready",function(){
+  changeContent();
+} );
+
+
+function changeContent(){
+
+ $(function(){
+     $("#dinamic-content").typed({
+       strings: ["Hi! Ich bin ","Hola! Soy ","Salut!  Je suis ", "Hi! I'm "],
+       typeSpeed: 100
+     });
+ });
+
+
+
+
+}
+
+</script>
 </body>
 
 <!-- ends body -->
