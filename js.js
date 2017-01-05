@@ -19,6 +19,7 @@ $( window ).resize(function() {
 $(document).on("ready",function(){
     slider();
     fitBackground();
+    changeContent();
 } );
 
 // LISTA DE FUNCIONES
@@ -133,10 +134,10 @@ if( (wdWidth-wdHeight) > 0 ){
 
 						if(bgHeight < wdHeight){
 							$(".bg-fit").css("background-size","auto 100%  ");
-							
+
 						}else{
 							$(".bg-fit").css("background-size","100% auto ");
-							
+
 						}
 										// $("#home").css("background-size","auto 100% ");
 										// console.log("pantalla1");
@@ -153,7 +154,7 @@ if( (wdWidth-wdHeight) > 0 ){
 									//console.log("pantalla4");
 								}else{
 									$(".bg-fit").css("background-size","130% auto ");
-									
+
 									//console.log("pantalla 5");
 
 								}
@@ -171,7 +172,7 @@ if( (wdWidth-wdHeight) > 0 ){
 
        if( (docHeight- docWidth) > (bgHeight-bgWidth) ){
 
-	
+
     	$(".bg-fit").css("background-size"," auto 100%");
 
      }else{
@@ -305,3 +306,15 @@ function ResetHeight(){
       auxId++;
     }
   }
+
+
+  function changeContent(){
+
+   $(function(){
+       $("#dinamic-content").typed({
+         strings: ["Hi! Ich bin ","Hola! Soy ","Salut!  Je suis ", "Hi! I'm "],
+         typeSpeed: 100
+       });
+   });
+
+ }
