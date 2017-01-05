@@ -24,8 +24,9 @@ imageObj.onload = function() {
     });
 };
 
+
 // Once the callback is arranged then set the source of the image
-imageObj.src = "https://raw.githubusercontent.com/MelMiranda/MelMiranda.github.io/master/img/smoke.png?token=ALM745VZnucDCUa3esSzy9YR0TMpIA50ks5YdujkwA%3D%3D";
+imageObj.src = "http://i.imgur.com/wJxI64w.png";
 
 // A function to create a particle object.
 function Particle(context) {
