@@ -26,7 +26,7 @@ imageObj.onload = function() {
 
 
 // Once the callback is arranged then set the source of the image
-imageObj.src = "http://i.imgur.com/wJxI64w.png";
+imageObj.src = "https://raw.githubusercontent.com/MelMiranda/MelMiranda.github.io/master/img/smoke.png?token=ALM741Fq7_PA73_2yzC9yRrtoyxgHr7Sks5YduwQwA%3D%3D";
 
 // A function to create a particle object.
 function Particle(context) {
