@@ -53,11 +53,11 @@ function Particle(context) {
             return;
         }
 
-        this.context.beginPath();
-        this.context.arc(this.x, this.y, this.radius, 0, 1* Math.PI, false);
-        this.context.fillStyle = "rgba(0, 255, 255, 1)";
-        this.context.fill();
-        this.context.closePath();
+       // this.context.beginPath();
+       // this.context.arc(this.x, this.y, this.radius, 0, 1* Math.PI, false);
+       // this.context.fillStyle = "rgba(0, 255, 255, 1)";
+       // this.context.fill();
+       // this.context.closePath();
     };
 
 
