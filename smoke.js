@@ -5,7 +5,7 @@ var particles = [];
 var particleCount = 30;
 
 // The maximum velocity in each direction
-var maxVelocity = 2;
+var maxVelocity = 1.5;
 
 // The target frames per second (how often do we want to update / redraw the scene)
 var targetFPS = 33;
@@ -25,7 +25,7 @@ imageObj.onload = function() {
 };
 
 // Once the callback is arranged then set the source of the image
-imageObj.src = "https://github.com/MelMiranda/MelMiranda.github.io/tree/master/img/smoke.png";
+imageObj.src = "https://raw.githubusercontent.com/MelMiranda/MelMiranda.github.io/master/img/smoke.png?token=ALM745VZnucDCUa3esSzy9YR0TMpIA50ks5YdujkwA%3D%3D";
 
 // A function to create a particle object.
 function Particle(context) {
