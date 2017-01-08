@@ -7,6 +7,8 @@ $(window).on("load",function(){
 
   SameHeight();
 
+
+
 });
 
 $( window ).resize(function() {
