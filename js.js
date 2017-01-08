@@ -4,7 +4,7 @@ $(window).on("load",function(){
 
  console.log('%c Welcome!! This is Melania ', 'background: #FFF; color: #FF69B4');
 
- loading();
+
   SameHeight();
 
 });

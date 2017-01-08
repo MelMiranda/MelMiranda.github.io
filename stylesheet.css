@@ -174,46 +174,7 @@ p{
   display: none
 }
 
-.list-skills li:first-child:hover{
-	color:rgba(255,0,0,.5);
-}
 
-.list-skills li:nth-child(2):hover{
-	color: rgba(0,0,255,.5);
-}
-
-.list-skills li:nth-child(3):hover{
-	color: rgba(0,255,0,.5);
-}
-.list-skills li:nth-child(4):hover{
-	color: rgba(196,0,255,0.5);
-}
-
-.list-skills li:nth-child(5):hover{
-	color: rgba(0,192,255,0.5);
-}
-
-.list-skills li:nth-child(6):hover{
-	color: rgba(247,255,0,.5);
-}
-
-.list-skills li:nth-child(7):hover{
-	color: rgba(241,169,214,1);
-}
-.list-skills li:nth-child(8):hover{
-	color: rgba(107,228,243,.5);
-}
-
-.list-skills li:nth-child(9):hover{
-	color: rgba(247,199,199,1);
-}
-
-.list-skills li:nth-child(10):hover{
-	color: rgba(255,0,137,.5);
-}
-
-.list-skills > li:hover {
-}
 
 .description-section{
 	padding: 20px 100px !important;
@@ -276,7 +237,7 @@ button:hover{
 
 .socialimg-1, .socialimg-2, .socialimg-3, .socialimg-4, .socialimg-5{
 	margin-right: 10px;
-  color: black;
+  color: white;
 }
 
 .socialimg-1:hover{
