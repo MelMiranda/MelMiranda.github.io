@@ -25,7 +25,7 @@ imageObj.onload = function() {
 
 
 
-imageObj.src = "https://raw.githubusercontent.com/MelMiranda/MelMiranda.github.io/master/img/smoke.png?token=ALM741Fq7_PA73_2yzC9yRrtoyxgHr7Sks5YduwQwA%3D%3D";
+imageObj.src = "../img/smoke.png";
 
 
 function Particle(context) {
