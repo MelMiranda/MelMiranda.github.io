@@ -26,7 +26,7 @@
     font-family: 'arialregular';
     src: url('fonts/arial-webfont.eot');
     src: url('fonts/arial-webfont.eot?#iefix') format('embedded-opentype'),
-      //  url('fonts/arial-webfont.woff2') format('woff2'),
+        url('fonts/arial-webfont.woff2') format('woff2'),
          url('fonts/arial-webfont.woff') format('woff'),
          url('fonts/arial-webfont.ttf') format('truetype'),
          url('fonts/arial-webfont.svg#arialregular') format('svg');
@@ -39,6 +39,10 @@
     25%  {filter:blur(0px)}
     50%  {filter:blur(10px);}
     100% {filter:blur(0px);}
+}
+
+a:visited, li:visited{
+  text-decoration: none;
 }
 
 footer{
@@ -259,6 +263,17 @@ button:hover{
 	color: rgba(220, 49, 47, 0.7);
 }
 
+@media screen and (min-width:767px){
+
+  .description-section,.button-section{
+    float: right;
+  }
+
+  .header-section{
+    position: fixed;
+  }
+
+}
 
 
 
@@ -273,6 +288,8 @@ button:hover{
 
 
 }
+
+
 
 /*MEDIA QUERY PARA MOBILE*/
 
@@ -398,7 +415,7 @@ body{
 
 @media screen and (min-width: 1200px){
 
-body{ 
+body{
 	font-size:2em;
 	}
 
