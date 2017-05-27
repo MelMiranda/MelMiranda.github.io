@@ -41,7 +41,7 @@
     100% {filter:blur(0px);}
 }
 
-a:visited, li:visited{
+a:visited, li:visited, a:focus{
   text-decoration: none;
 }
 
