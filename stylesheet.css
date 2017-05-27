@@ -296,7 +296,7 @@ button:hover{
 @media screen and (max-width: 767px){
 
   body{
-    font-size: 17px;
+    font-size: 17px !important;
   }
 
   .socialimg-1, .socialimg-2, .socialimg-3, .socialimg-4, .socialimg-5{
