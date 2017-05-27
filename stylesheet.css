@@ -364,6 +364,10 @@ display: none;
 	background-attachment: fixed;
 }*/
 
+.pswp__caption__center{
+  display: none !important;
+}
+
 /*TERMINA MEDIA QUERY MOBILE*/
 }
 
