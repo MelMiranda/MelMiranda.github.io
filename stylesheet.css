@@ -420,3 +420,12 @@ body{
 	}
 
 }
+
+
+
+/*custom style for slider*/
+
+.pswp__share-tooltip{
+  font-family: "AbelRegular" !important;
+
+}
