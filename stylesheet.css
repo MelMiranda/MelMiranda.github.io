@@ -295,6 +295,10 @@ button:hover{
 
 @media screen and (max-width: 767px){
 
+  body{
+    font-size: 17px;
+  }
+
   .socialimg-1, .socialimg-2, .socialimg-3, .socialimg-4, .socialimg-5{
     color: white;
   }
@@ -352,6 +356,7 @@ button:hover{
 .description-section h2 span{
 display: none;
 }
+
 
 /*body{
 	background-size: 100vh 100vh  ;
@@ -425,7 +430,20 @@ body{
 
 /*custom style for slider*/
 
-.pswp__share-tooltip{
+.pswp__share-tooltip, .pswp__caption__center{
   font-family: "AbelRegular" !important;
 
+}
+
+.pswp__caption__center{
+  font-size: 1.2em !important;
+}
+
+
+.pswp__caption__center a{
+  color: rgba(244,67,54,.6);
+}
+
+.pswp__caption__center a:hover{
+  color: rgba(244,67,54,1);
 }
