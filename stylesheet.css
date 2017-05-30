@@ -451,3 +451,8 @@ body{
 .pswp__caption__center a:hover{
   color: rgba(244,67,54,1);
 }
+
+.tipo-work{
+  color:black;
+  opacity: .5;
+}
