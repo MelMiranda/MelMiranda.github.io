@@ -2,16 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="https://www.frba.utn.edu.ar/wp-content/uploads/2016/06/cropped-logo-1-250x250.png">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="  crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/sources/icon.png">
+    <script src="/sources/jquery-3.2.1.min.js"></script>
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" href="/sources/bootstrap.min.css">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="/sources/bootstrap.min.js"></script>
 
   <title>TP Simulación</title>
 
@@ -115,14 +111,14 @@
 
       <label for="">Porcentaje usuarios cochera externas</label><br>
       <p class="resultado" id="porcentaje-usuarios-externos"></p>
-	  
+
 	  <!-- cantidad usos -->
 	  <label for="">Cantidad usos de cocheras propias</label><br>
       <p class="resultado" id="sum_usuario_propia"></p>
-	  
+
 	  	  <label for="">Cantidad usos de cocheras externas</label><br>
       <p class="resultado" id="sum_usuario_externa"></p>
-	  
+
 
       <button class="reiniciar"style="display:none" type="button" name="button" onclick="reiniciar()">REINICIAR</button>
 
@@ -348,8 +344,8 @@
           var por_rech =porcentaje_rechazados.toFixed(2);
           $('#porcentaje-rechazados').text(por_rech+'  %');
 
-		  
-		  
+
+
 		  $('#sum_usuario_externa').text(sum_usuario_externa+'  #');
 		  $('#sum_usuario_propia').text(sum_usuario_propia+'  #');
           $('.resultado-error').text("Terminó la simulación");
