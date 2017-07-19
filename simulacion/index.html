@@ -32,6 +32,9 @@
       .titulo{
         font-size: 20px;
       }
+      input{
+        outline: none;
+      }
 
       label{
         color: #716f6f;
@@ -50,6 +53,7 @@
         color: white;
         padding: 10px;
         margin: 30px 0;
+        outline: none;
       }
 
       button:hover{
@@ -77,13 +81,13 @@
 
     </style>
 
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
       <p class="titulo">VARIABLES DE CONTROL</p>
       <label for=""> Cantidad de cocheras propias (CCP)</label><br>
       <input id="cant-cocheras" type="text" name="" value=""><br>
 
-      <label for=""> Cantidad de usos MÁXIMOS de cocheras  externas (CCE)</label><br>
+      <label for=""> Cantidad de usos MÁXIMOS de cocheras  externas (CMVCE)</label><br>
       <input id="cant-cocheras-externas" type="text" name="" value=""><br>
 
       <label for=""> Tiempo Final (TIEMPO) <br> <span style="font-size:12px;color:#9a9a9a; font-weight:100; font-style:italic">Default : 1 mes - 43200 min</span></label><br>
@@ -92,7 +96,7 @@
       <button class="empezar" type="button" name="button" onclick="main()">EMPEZAR</button>
     </div>
 
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 simulaciones">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 simulaciones">
       <p class="titulo">RESULTADOS</p>
       <p class="resultado-error resultado"></p>
       <!-- costo total -->
@@ -174,7 +178,7 @@
 
           $(".reiniciar").fadeIn();
 
-          $(".empezar").css("opacity", ".2");
+          // $(".empezar").css("opacity", ".2");
 
           //Variables de corte
 
@@ -191,7 +195,7 @@
           tiempo_final=43200;
         }
 
-        console.log(tiempo_final);
+        // console.log(tiempo_final);
         tiempo_espera=15;
 
         tiempo=0;
@@ -213,8 +217,12 @@
         for(i = 0; i < n_cocheras; i++)ste[i] =0;
         for(i = 0; i < n_cocheras; i++)sto[i] =0;
 
-
-
+        if(n_cocheras==0){
+          tc[0]=0;
+          ste[0]=0;
+          sto[0]=0;
+        }
+        console.log(tc);
           while (tiempo < tiempo_final){
 
 
@@ -235,7 +243,8 @@
                       ste[indice]=ste[indice] + (tc[indice] - tiempo);
                       tiempo_uso=tiempo_uso_cochera();
                       tc[indice] = tc[indice] + tiempo_uso;
-					  sum_usuario_propia++;
+          					  sum_usuario_propia++;
+                      // console.log("A: "+sum_usuario_propia);
 
                       nt++;
 
@@ -262,7 +271,7 @@
                             sum_usuario_externa++;
                             nt++;
 
-                            console.log(sum_usuario_externa);
+                            // console.log(sum_usuario_externa);
 
                           }else{
                             //NO
@@ -276,8 +285,9 @@
                   //NO - Ocio
                   sto[indice]=sto[indice] - (tiempo - tc[indice]);
                   tiempo_uso=tiempo_uso_cochera();
-                  tc[indice] = tc[indice] + tiempo_uso;
+                  tc[indice] = tiempo + tiempo_uso;
 		              sum_usuario_propia++;
+                  console.log("B: "+sum_usuario_propia);
                   nt++;
                 }
 
@@ -362,7 +372,7 @@
           $('input').val('');
           $('.resultado-error').text('');
           $('.reiniciar').css("display", "none");
-          $(".empezar").css("opacity", "1");
+          // $(".empezar").css("opacity", "1");
           $('#costo-total').text('');
           $('#costo-total-minimo').text("");
           $('#costo-total-interno').text('');
