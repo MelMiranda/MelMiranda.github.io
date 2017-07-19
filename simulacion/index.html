@@ -86,7 +86,7 @@
       <label for=""> Cantidad de usos MÁXIMOS de cocheras  externas (CCE)</label><br>
       <input id="cant-cocheras-externas" type="text" name="" value=""><br>
 
-      <label for=""> Tiempo Final (TIEMPO) </label><br>
+      <label for=""> Tiempo Final (TIEMPO) <br> <span style="font-size:12px;color:#9a9a9a; font-weight:100; font-style:italic">Default : 1 mes - 43200 min</span></label><br>
       <input id="tiempo-final" type="text" name="" value=""><br>
 
       <button class="empezar" type="button" name="button" onclick="main()">EMPEZAR</button>
@@ -158,7 +158,7 @@
         //variables extra
         var sum_rechazados;
         var sum_usuario_externa;
-		var sum_usuario_propia;
+		      var sum_usuario_propia;
         var minutos_espera;
         var tiempo;
         var tiempo_estadia;
@@ -185,8 +185,13 @@
 
         n_cocheras=parseInt($('#cant-cocheras').val());
         n_cocheras_externas=parseInt($('#cant-cocheras-externas').val());
-        tiempo_final=parseInt($('#tiempo-final').val());
 
+        tiempo_final=parseInt($('#tiempo-final').val());
+        if(isNaN(tiempo_final)){
+          tiempo_final=43200;
+        }
+
+        console.log(tiempo_final);
         tiempo_espera=15;
 
         tiempo=0;
@@ -272,7 +277,7 @@
                   sto[indice]=sto[indice] - (tiempo - tc[indice]);
                   tiempo_uso=tiempo_uso_cochera();
                   tc[indice] = tc[indice] + tiempo_uso;
-				  sum_usuario_propia++;
+		              sum_usuario_propia++;
                   nt++;
                 }
 
