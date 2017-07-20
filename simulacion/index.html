@@ -92,6 +92,11 @@
 
       <label for=""> Tiempo Final (TIEMPO) <br> <span style="font-size:12px;color:#9a9a9a; font-weight:100; font-style:italic">Default : 1 mes - 43200 min</span></label><br>
       <input id="tiempo-final" type="text" name="" value=""><br>
+      <p style="font-size:13px;color:#9a9a9a; font-weight:300; padding-top:30px;">
+        <span style="font-size:13px;color:#9a9a9a; font-weight:200; ">Valores establecidos para la simulación</span><br>
+        Tiempo estadia: 480 minutos.<br>
+        Costo estadia =300 $ <br>
+        Costo cochera por hora=80$ - 1.33$ /minutos</p>
 
       <button class="empezar" type="button" name="button" onclick="main()">EMPEZAR</button>
     </div>
@@ -204,10 +209,12 @@
         nt=0;
         sum_rechazados=0;
         sum_usuario_externa=0;
+
 		sum_usuario_propia=0;
         tiempo_estadia=480; //minutos
         costo_estadia=300;
         costo_hora=1.33;
+
         costo_total_mensual=0;
         costo_total_externas=0;
         costo_total_internas=0;
