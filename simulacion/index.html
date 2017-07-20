@@ -207,7 +207,7 @@
 		sum_usuario_propia=0;
         tiempo_estadia=480; //minutos
         costo_estadia=300;
-        costo_hora=80;
+        costo_hora=1.33;
         costo_total_mensual=0;
         costo_total_externas=0;
         costo_total_internas=0;
@@ -222,7 +222,7 @@
           //   ste[0]=0;
           //   sto[0]=0;
           // }
-        console.log(tc);
+        // console.log(tc);
           while (tiempo < tiempo_final){
 
 
@@ -287,7 +287,7 @@
                   tiempo_uso=tiempo_uso_cochera();
                   tc[indice] = tiempo + tiempo_uso;
 		              sum_usuario_propia++;
-                  console.log("B: "+sum_usuario_propia);
+                  // console.log("B: "+sum_usuario_propia);
                   nt++;
                 }
 
@@ -351,9 +351,12 @@
 
           porcentaje_rechazados=sum_rechazados*100 /(sum_rechazados+nt);
 
-          $('#costo-total').text(costo_total_mensual+'  $');
-          $('#costo-total-interno').text(costo_total_internas+'  $');
-          $('#costo-total-externo').text(costo_total_externas+'  $');
+          var cos_men=costo_total_mensual.toFixed(2);
+          $('#costo-total').text(cos_men+'  $');
+          var cos_int=costo_total_internas.toFixed(2);
+          $('#costo-total-interno').text(cos_int+'  $');
+          var cos_ext =costo_total_externas.toFixed(2);
+          $('#costo-total-externo').text(cos_ext+'  $');
           var por_ext =porcentaje_usario_externa.toFixed(2);
           $('#porcentaje-usuarios-externos').text(por_ext +'  %');
           var por_rech =porcentaje_rechazados.toFixed(2);
