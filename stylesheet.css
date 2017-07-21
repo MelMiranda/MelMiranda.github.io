@@ -379,12 +379,17 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : portrait) {
 
-/*body{
-	background-size:100%  100% ;
-	background-image: url("fondo-2-mobile.JPG");
-	background-attachment: fixed;
-}
-*/
+  .button-section, .description-section{
+    float: right !important;
+  }
+
+  .header-section{
+    position: fixed !important;
+  }
+
+  body{
+    height: 100vh;
+  }
 
 
 /* ENDS IPAD PORTRAIT*/
@@ -411,25 +416,21 @@ and (orientation : landscape) {
 /*MEDIA QUERY PARA LG*/
 
 
+@media only screen and (min-width: 992px){
+  body{
+  	padding:40px;
+    font-size:2em;
+  }
 
-@media only screen and(min-width:1200px){
+  .button-section, .description-section{
+    float: right !important;
+  }
 
-
-body{
-	padding:40px;
-}
-
-
-}
-
-@media screen and (min-width: 1200px){
-
-body{
-	font-size:2em;
-	}
+  .header-section{
+    position: fixed !important;
+  }
 
 }
-
 
 
 /*custom style for slider*/
