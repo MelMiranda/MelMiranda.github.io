@@ -296,7 +296,7 @@ button:hover{
 @media screen and (max-width: 767px){
 
   body{
-    font-size: 17px !important;
+    font-size: 20px !important;
   }
 
   .socialimg-1, .socialimg-2, .socialimg-3, .socialimg-4, .socialimg-5{
@@ -309,9 +309,12 @@ button:hover{
   }
 
 .header-section{
-  height: 20rem;
+  height: 12rem;
 }
 
+  .header-inner{
+    margin-top:4rem;
+  }
 
 
 .button-section{
@@ -321,6 +324,8 @@ button:hover{
 .description-section{
 	padding: 0px 30px !important;
 	margin-bottom: 20px;
+  overflow-y: scroll;
+  height: 65vh;
 }
 
 .button-section{
@@ -357,6 +362,14 @@ button:hover{
 display: none;
 }
 
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
 
 /*body{
 	background-size: 100vh 100vh  ;
