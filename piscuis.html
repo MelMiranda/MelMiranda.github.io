@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mau y Mel</title>
+    <link rel="icon" type="image/png" href="https://www.pngall.com/wp-content/uploads/8/Vector-Heart-Balloon-Transparent.png">
+    <style>
+
+/* COVER */
+  /* Estilos para el div que cubre toda la página */
+  .cover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: black ;/* Fondo semi-transparente */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Asegura que el div esté en la parte superior */
+        }
+
+        /* Estilos para el formulario de acceso */
+        .login-form {
+            display: grid;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+        }
+
+        input {
+            margin-bottom: 20px;
+            padding: 5px;
+            border: none;
+            border-bottom: 1px solid gray;
+        }
+
+        button {
+            background-color: #516ec4;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+        }
+
+        
+        
+    /* CONTENIDO */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+            margin-bottom: 10%;
+        }
+
+        h1 {
+            font-size: 300%;
+            color: #516ec4
+        }
+
+        h2, h1 {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        p {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        .timer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+        }
+
+        .time-unit {
+            text-align: center;
+            font-size: 40%;
+            color: gray;
+        }
+
+        .credit {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            margin-top: 50px;
+        }
+
+        .credit:hover {
+            color: #333;
+        }
+
+        #cumple-days, #cumple-hours, #cumple-minutes, #cumple-seconds  {
+            font-size: 130%;
+    font-weight: bold;
+    color: #4c8625;
+    margin: 0 20px;
+        }
+
+        #amor-days, #amor-hours, #amor-minutes, #amor-seconds  {
+            font-size: 130%;
+    font-weight: bold;
+    color: #e03790;
+    margin: 0 20px;
+        }
+
+        img {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            height: 10%;  
+        }
+
+        span {
+            color: #595959;
+    font-size: 15px;
+    letter-spacing: 2px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="cover" id="cover">
+        <form class="login-form" onsubmit="return ingresar();">
+            <h2>Acceso restringido</h2>
+            <input type="text" id="usuario" required placeholder="usuario">
+            <input type="password" id="contrasena" required placeholder="contraseña">
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+
+    <h1>FELÍZ CUMPLEAÑOS MI AMOR</h1>
+    <h2>DESDE QUE NACISTE PASARON <br> <span> 31/07/1993</span> </h2>
+   
+
+    <div class="timer-container" id="timer">
+        <div class="time-unit" id="cumple-days">0</div>
+        <div class="time-unit">días</div>
+        <div class="time-unit" id="cumple-hours">0</div>
+        <div class="time-unit">horas</div>
+
+    </div>
+    <div class="timer-container" id="timer">
+        <div class="time-unit" id="cumple-minutes">0</div>
+        <div class="time-unit">minutos</div>
+        <div class="time-unit" id="cumple-seconds">0</div>
+        <div class="time-unit">segundos</div>
+    </div>
+
+
+    <h2>DESDE QUE SOMOS UNO PASARON
+        <br><span> 10/09/2016</span>
+    </h2>
+    
+    <div class="timer-container" id="timer">
+        <div class="time-unit" id="amor-days">0</div>
+        <div class="time-unit">días</div>
+        <div class="time-unit" id="amor-hours">0</div>
+        <div class="time-unit">horas</div>
+        
+    </div>
+    <div class="timer-container" id="timer">
+        <div class="time-unit" id="amor-minutes">0</div>
+        <div class="time-unit">minutos</div>
+        <div class="time-unit" id="amor-seconds">0</div>
+        <div class="time-unit">segundos</div>
+    </div>
+
+    <img src="https://freepngimg.com/thumb/balloons/37388-7-balloons-hd.png" alt="">
+
+    <script>
+        // Función para calcular el tiempo transcurrido desde una fecha específica
+        function calcularTiempoTranscurrido(desdeFecha) {
+            const fechaInicial = new Date(desdeFecha);
+            const fechaActual = new Date();
+
+            const tiempoTranscurrido = fechaActual - fechaInicial;
+
+            const segundos = Math.floor(tiempoTranscurrido / 1000) % 60;
+            const minutos = Math.floor(tiempoTranscurrido / 1000 / 60) % 60;
+            const horas = Math.floor(tiempoTranscurrido / 1000 / 3600) % 24;
+            const dias = Math.floor(tiempoTranscurrido / 1000 / 3600 / 24);
+
+            return { dias, horas, minutos, segundos };
+        }
+
+        // Función para mostrar el tiempo transcurrido en pantalla
+        function mostrarTiempoTranscurridoAmor() {
+            const fechaInicial = '2016-09-10';
+            const tiempoTranscurrido = calcularTiempoTranscurrido(fechaInicial);
+
+            document.getElementById('amor-days').textContent = tiempoTranscurrido.dias;
+            document.getElementById('amor-hours').textContent = tiempoTranscurrido.horas;
+            document.getElementById('amor-minutes').textContent = tiempoTranscurrido.minutos;
+            document.getElementById('amor-seconds').textContent = tiempoTranscurrido.segundos;
+
+            // Actualizar el temporizador cada segundo
+            setTimeout(mostrarTiempoTranscurridoAmor, 1000);
+        }
+
+        function mostrarTiempoTranscurridoCumple() {
+            const fechaInicial = '1993-07-31';
+            const tiempoTranscurrido = calcularTiempoTranscurrido(fechaInicial);
+
+            document.getElementById('cumple-days').textContent = tiempoTranscurrido.dias;
+            document.getElementById('cumple-hours').textContent = tiempoTranscurrido.horas;
+            document.getElementById('cumple-minutes').textContent = tiempoTranscurrido.minutos;
+            document.getElementById('cumple-seconds').textContent = tiempoTranscurrido.segundos;
+
+            // Actualizar el temporizador cada segundo
+            setTimeout(mostrarTiempoTranscurridoCumple, 1000);
+        }
+
+        // Iniciar el temporizador cuando se cargue la página
+        mostrarTiempoTranscurridoAmor();
+        mostrarTiempoTranscurridoCumple();
+    </script>
+
+<script>
+    // Función para ocultar el div de acceso cuando se ingresa el usuario y contraseña correctos
+    function ingresar() {
+        var usuario = document.getElementById('usuario').value;
+        var contrasena = document.getElementById('contrasena').value;
+
+        // Aquí puedes verificar las credenciales con alguna lógica específica
+        // Por ejemplo, si el usuario y la contraseña son válidos, ocultamos el div de acceso:
+        if (usuario === '22022021' && contrasena === '02062021') {
+            document.getElementById('cover').style.display = 'none';
+        } else {
+            alert('Credenciales incorrectas. Inténtalo nuevamente.');
+        }
+
+        // Evitamos que el formulario se envíe y la página se recargue
+        return false;
+    }
+</script>
+
+    <div class="credit">
+        Hecho con mucho amor, Mel
+    </div>
+</body>
+</html>
