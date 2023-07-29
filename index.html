@@ -1,257 +1,529 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mau y Mel</title>
-    <link rel="icon" type="image/png" href="https://www.pngall.com/wp-content/uploads/8/Vector-Heart-Balloon-Transparent.png">
-    <style>
+<html>
+    <head>
 
-/* COVER */
-  /* Estilos para el div que cubre toda la página */
-  .cover {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: black ;/* Fondo semi-transparente */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999; /* Asegura que el div esté en la parte superior */
-        }
-
-        /* Estilos para el formulario de acceso */
-        .login-form {
-            display: grid;
-            text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            max-width: 300px;
-        }
-
-        input {
-            margin-bottom: 20px;
-            padding: 5px;
-            border: none;
-            border-bottom: 1px solid gray;
-        }
-
-        button {
-            background-color: #516ec4;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    border-radius: 4px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-        }
-
-        
-        
-    /* CONTENIDO */
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-            color: #333;
-            margin-bottom: 10%;
-        }
-
-        h1 {
-            font-size: 300%;
-            color: #516ec4
-        }
-
-        h2, h1 {
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        p {
-            text-align: center;
-            font-size: 24px;
-            margin: 20px 0;
-        }
-
-        .timer-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 36px;
-        }
-
-        .time-unit {
-            text-align: center;
-            font-size: 40%;
-            color: gray;
-        }
-
-        .credit {
-            text-align: center;
-            font-size: 14px;
-            color: #777;
-            margin-top: 50px;
-        }
-
-        .credit:hover {
-            color: #333;
-        }
-
-        #cumple-days, #cumple-hours, #cumple-minutes, #cumple-seconds  {
-            font-size: 130%;
-    font-weight: bold;
-    color: #4c8625;
-    margin: 0 20px;
-        }
-
-        #amor-days, #amor-hours, #amor-minutes, #amor-seconds  {
-            font-size: 130%;
-    font-weight: bold;
-    color: #e03790;
-    margin: 0 20px;
-        }
-
-        img {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            height: 10%;  
-        }
-
-        span {
-            color: #595959;
-    font-size: 15px;
-    letter-spacing: 2px;
-        }
-
-    </style>
-</head>
-<body>
-
-    <div class="cover" id="cover">
-        <form class="login-form" onsubmit="return ingresar();">
-            <h2>Acceso restringido</h2>
-            <input type="text" id="usuario" required placeholder="usuario">
-            <input type="password" id="contrasena" required placeholder="contraseña">
-            <button type="submit">Ingresar</button>
-        </form>
-    </div>
-
-    <h1>FELÍZ CUMPLEAÑOS MI AMOR</h1>
-    <h2>DESDE QUE NACISTE PASARON <br> <span> 31/07/1993</span> </h2>
-   
-
-    <div class="timer-container" id="timer">
-        <div class="time-unit" id="cumple-days">0</div>
-        <div class="time-unit">días</div>
-        <div class="time-unit" id="cumple-hours">0</div>
-        <div class="time-unit">horas</div>
-
-    </div>
-    <div class="timer-container" id="timer">
-        <div class="time-unit" id="cumple-minutes">0</div>
-        <div class="time-unit">minutos</div>
-        <div class="time-unit" id="cumple-seconds">0</div>
-        <div class="time-unit">segundos</div>
-    </div>
-
-
-    <h2>DESDE QUE SOMOS UNO PASARON
-        <br><span> 10/09/2016</span>
-    </h2>
+        <title> Melania Miranda </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Melania Miranda, Desarrollo Web, Diseño Web, Freelance, Web Designer, fotografia, ingenieria, sistemas, Solange, Melania, Github Melania Miranda, developer">
     
-    <div class="timer-container" id="timer">
-        <div class="time-unit" id="amor-days">0</div>
-        <div class="time-unit">días</div>
-        <div class="time-unit" id="amor-hours">0</div>
-        <div class="time-unit">horas</div>
+        <meta name="author" content="Melania Miranda">
+        <link rel="stylesheet" href="stylesheet.css" />
+        <link rel="shortcut icon" href="img/icon-page.png" type="image/png">
+    
+       <!--  <link rel="shortcut icon" href="favicon.ico" /> -->
+       <link rel="stylesheet" href="photoswipe.css" rel="stylesheet">
+       <link rel="stylesheet" href="default-skin/default-skin.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="font-awesome.min.css">
+        <link href="bootstrap/css/font-awesome.min.css" rel="stylesheet">
+    
+    
+        <script src="jquery-1.12.4.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="bootstrap/js/bootstrap.js"></script>
+        <script src="bootstrap/js/npm.js"></script>
+        <script src="typed.js"></script>
+        <script src="js.js"></script>
+    
+        <script src="photoswipe.min.js"></script>
+    
+    
+        <script src="photoswipe-ui-default.min.js"></script>
+    
+    
+    
+    
+    
+    </head>
+    
+    
+    <body class="col-lg-12 col-sm-12 col-md-12 col-xs-12 bg-fit">
+    <canvas id="myCanvas" ></canvas>
+    
+    <div id="fb-root"></div>
+    
+    </div>
+    
+    
+    <!-- ENDS LOADING GIF -->
+    
+    <section class="col-lg-3 col-sm-3 col-md-3 col-xs-12 header-section">
+      <!-- ACA TIENE QUE IR MI IMAGEN Y REFERENCIA DE MI MAS UN FONDO -->
+    
+      <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 header-inner">
+      <!-- <img  id="icono-m" src ="img/icon-page.png" alt="selfIcon" /> -->
+      <p> <span id="dinamic-content">Hi, I'm </span>Melania Miranda</p>
+      </div>
+    
+    
+    </section>
+    
+    <div class="col-lg-9 col-sm-9 col-md-9 col-xs-12 button-section">
+    
+        <button class="prev"></button>
+        <button class="next"></button>
+    
+    
+    </div>
+    
+    
+    <!-- <div class="fb-share-button" data-href="http://melmiranda.github.io" data-layout="button_count" data-mobile-iframe="true"></div> -->
+    
+    <section class="col-lg-8 col-sm-8 col-md-8 col-xs-12 description-section">
+    
+    
+    
+    <!-- ACA TIENE QUE IR INFO SOBRE MI -->
+    
+    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 window-0" hid="1" >
+    
+      <h1><span class="glyphicon glyphicon-briefcase"></span> Experience</h1>
+    
+      <!-- <span class="glyphicon glyphicon-education"></span> -->
+    
+      <ul class="list-skills">
+        <!DOCTYPE html>
+        <html>
+        <head>
         
-    </div>
-    <div class="timer-container" id="timer">
-        <div class="time-unit" id="amor-minutes">0</div>
-        <div class="time-unit">minutos</div>
-        <div class="time-unit" id="amor-seconds">0</div>
-        <div class="time-unit">segundos</div>
-    </div>
-
-    <img src="https://freepngimg.com/thumb/balloons/37388-7-balloons-hd.png" alt="">
-
-    <script>
-        // Función para calcular el tiempo transcurrido desde una fecha específica
-        function calcularTiempoTranscurrido(desdeFecha) {
-            const fechaInicial = new Date(desdeFecha);
-            const fechaActual = new Date();
-
-            const tiempoTranscurrido = fechaActual - fechaInicial;
-
-            const segundos = Math.floor(tiempoTranscurrido / 1000) % 60;
-            const minutos = Math.floor(tiempoTranscurrido / 1000 / 60) % 60;
-            const horas = Math.floor(tiempoTranscurrido / 1000 / 3600) % 24;
-            const dias = Math.floor(tiempoTranscurrido / 1000 / 3600 / 24);
-
-            return { dias, horas, minutos, segundos };
-        }
-
-        // Función para mostrar el tiempo transcurrido en pantalla
-        function mostrarTiempoTranscurridoAmor() {
-            const fechaInicial = '2016-09-10';
-            const tiempoTranscurrido = calcularTiempoTranscurrido(fechaInicial);
-
-            document.getElementById('amor-days').textContent = tiempoTranscurrido.dias;
-            document.getElementById('amor-hours').textContent = tiempoTranscurrido.horas;
-            document.getElementById('amor-minutes').textContent = tiempoTranscurrido.minutos;
-            document.getElementById('amor-seconds').textContent = tiempoTranscurrido.segundos;
-
-            // Actualizar el temporizador cada segundo
-            setTimeout(mostrarTiempoTranscurridoAmor, 1000);
-        }
-
-        function mostrarTiempoTranscurridoCumple() {
-            const fechaInicial = '1993-07-31';
-            const tiempoTranscurrido = calcularTiempoTranscurrido(fechaInicial);
-
-            document.getElementById('cumple-days').textContent = tiempoTranscurrido.dias;
-            document.getElementById('cumple-hours').textContent = tiempoTranscurrido.horas;
-            document.getElementById('cumple-minutes').textContent = tiempoTranscurrido.minutos;
-            document.getElementById('cumple-seconds').textContent = tiempoTranscurrido.segundos;
-
-            // Actualizar el temporizador cada segundo
-            setTimeout(mostrarTiempoTranscurridoCumple, 1000);
-        }
-
-        // Iniciar el temporizador cuando se cargue la página
-        mostrarTiempoTranscurridoAmor();
-        mostrarTiempoTranscurridoCumple();
-    </script>
-
-<script>
-    // Función para ocultar el div de acceso cuando se ingresa el usuario y contraseña correctos
-    function ingresar() {
-        var usuario = document.getElementById('usuario').value;
-        var contrasena = document.getElementById('contrasena').value;
-
-        // Aquí puedes verificar las credenciales con alguna lógica específica
-        // Por ejemplo, si el usuario y la contraseña son válidos, ocultamos el div de acceso:
-        if (usuario === '22022021' && contrasena === '02062021') {
-            document.getElementById('cover').style.display = 'none';
-        } else {
-            alert('Credenciales incorrectas. Inténtalo nuevamente.');
-        }
-
-        // Evitamos que el formulario se envíe y la página se recargue
-        return false;
-    }
-</script>
-
-    <div class="credit">
-        Hecho con mucho amor, Mel
-    </div>
-</body>
-</html>
+            <title> Melania Miranda </title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="keywords" content="Melania Miranda, Desarrollo Web, Diseño Web, Freelance, Web Designer, fotografia, ingenieria, sistemas, Solange, Melania, Github Melania Miranda, developer">
+        
+            <meta name="author" content="Melania Miranda">
+            <link rel="stylesheet" href="stylesheet.css" />
+            <link rel="shortcut icon" href="img/icon-page.png" type="image/png">
+        
+           <!--  <link rel="shortcut icon" href="favicon.ico" /> -->
+           <link rel="stylesheet" href="photoswipe.css" rel="stylesheet">
+           <link rel="stylesheet" href="default-skin/default-skin.css">
+            <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+            <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
+            <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
+            <link rel="stylesheet" type="text/css" href="font-awesome.min.css">
+            <link href="bootstrap/css/font-awesome.min.css" rel="stylesheet">
+        
+        
+            <script src="jquery-1.12.4.min.js"></script>
+            <script src="bootstrap/js/bootstrap.min.js"></script>
+            <script src="bootstrap/js/bootstrap.js"></script>
+            <script src="bootstrap/js/npm.js"></script>
+            <script src="typed.js"></script>
+            <script src="js.js"></script>
+        
+            <script src="photoswipe.min.js"></script>
+        
+        
+            <script src="photoswipe-ui-default.min.js"></script>
+        
+        
+        
+        
+        
+        </head>
+        
+        
+        <body class="col-lg-12 col-sm-12 col-md-12 col-xs-12 bg-fit">
+        <canvas id="myCanvas" ></canvas>
+        
+        <div id="fb-root"></div>
+        
+        </div>
+        
+        
+        <!-- ENDS LOADING GIF -->
+        
+        <section class="col-lg-3 col-sm-3 col-md-3 col-xs-12 header-section">
+          <!-- ACA TIENE QUE IR MI IMAGEN Y REFERENCIA DE MI MAS UN FONDO -->
+        
+          <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 header-inner">
+          <!-- <img  id="icono-m" src ="img/icon-page.png" alt="selfIcon" /> -->
+          <p> <span id="dinamic-content">Hi, I'm </span>Melania Miranda</p>
+          </div>
+        
+        
+        </section>
+        
+        <div class="col-lg-9 col-sm-9 col-md-9 col-xs-12 button-section">
+        
+            <button class="prev"></button>
+            <button class="next"></button>
+        
+        
+        </div>
+        
+        
+        <!-- <div class="fb-share-button" data-href="http://melmiranda.github.io" data-layout="button_count" data-mobile-iframe="true"></div> -->
+        
+        <section class="col-lg-8 col-sm-8 col-md-8 col-xs-12 description-section">
+        
+        
+        
+        <!-- ACA TIENE QUE IR INFO SOBRE MI -->
+        
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 window-0" hid="1" >
+        
+          <h1><span class="glyphicon glyphicon-briefcase"></span> Experience</h1>
+        
+          <!-- <span class="glyphicon glyphicon-education"></span> -->
+        
+          <ul class="list-skills">
+            <style>
+        
+              .link-green{
+                text-decoration: none;
+                color:#4cab90;
+              }
+        
+              .link-green:hover{
+                text-decoration: none;
+                color:  #9ae2ce;
+              }
+        
+        
+            </style>
+        
+              <li>Project Leader, developer at <a class="link-green" href="https://ventas-tintafresca.com/">Clarín, Editorial Tinta Fresca</a></li>
+              <li>CoFounder, Developer, Designer at <a class="link-green" href="http://syntagma-software.com/">Syntagma Software</a></li>
+              <li>Volunteer Web Master at <a class="link-green" href="https://ieee.frba.utn.edu.ar">IEEE Student Branch UTN.BA</a></li>
+              <li>Full-stack PHP developer at Nitro Interactivo</li>
+              <li>Functional Analyst at <a class="link-green" href="https://www.renault.com.ar/">Renault® Argentina</a> </li>
+          </ul>
+        
+        
+            <h1><span class="glyphicon glyphicon-education"></span> Studies</h1>
+        
+            <!-- <span class="glyphicon glyphicon-education"></span> -->
+        
+            <ul class="list-skills">
+        
+                <li>Systems engineering</li>
+                <li>Web Development</li>
+                <li>Multimedia Design</li>
+        
+            </ul>
+        
+        
+        
+            <h1 ><span class="glyphicon glyphicon-globe"></span> Contact</h1>
+        
+            <a href="https://ar.linkedin.com/in/melania-s-miranda-cardenas-7ab67253" target="_blank">
+                <i class="fa fa-linkedin fa-3x socialimg-3" aria-hidden="true"></i>
+            </a>
+            <a href="https://github.com/MelMiranda" target="_blank">
+        
+                <i class="fa fa-github-alt fa-3x socialimg-2" aria-hidden="true"></i>
+            </a>
+        
+        
+            <a href="mailto:melania.smc@hotmail.com" target="_blank">
+                <i class="fa fa-envelope fa-3x socialimg-1" aria-hidden="true"></i>
+            </a>
+        
+        
+        </div>
+        
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 window-1" hid="1">
+            <h1><span class="glyphicon glyphicon-queen"></span>  Skills</h1>
+        
+            <ul class="list-skills col-lg-6 col-md-6 col-sm-6 col-xs-6">
+               <h2>Languages</h2>
+        
+                <li>PHP</li>
+                <li>HTML5 - HTML5 Canvas</li>
+                <li>CSS3</li>
+                <li>SASS/LESS</li>
+                <li>JavaScript</li>
+                <li>Jquery</li>
+                <li>AngularJS</li>
+                <li>Vue.js</li>
+                <li>SQL | T-SQL | MySQL</li>
+                <li>ANSI C</li>
+                <li>C++</li>
+                <li>C#</li>
+                <li>Processing</li>
+                <li>Haskell</li>
+                <li>Prolog</li>
+                <li>Smalltalk</li>
+        
+        
+            </ul>
+        
+            <ul class="list-skills col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <h2 >Extra</h2>
+        
+                <li>MVC</li>
+                <li>Bootstrap</li>
+                <li>Wordpress</li>
+                <li>Responsive Design</li>
+                <li>UI | UX</li>
+                <li>Yii Framework</li>
+                <li>Laravel Framework</li>
+                <li>CodeIgniter Framework</li>
+                <li>Windows | MacOs | Linux dist.</li>
+                <li>npm | composer</li>
+                <li>Git</li>
+                <li>Illustrator</li>
+                <li>Photoshop</li>
+                <li>Dreamweaver</li>
+        
+            </ul>
+        
+        </div>
+        
+        
+        
+        
+        
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 window-3" hid="1">
+        
+            <h1 ><i class="fa fa-trophy fa-1x" aria-hidden="true"></i>  Project & Collaboration </h1>
+        
+            <li><i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Desarrollo] </span><a class="link-green" target="_blank" href="http://tintaplay.com.ar/"> TintaPlay </a>, contenidos interactivos.
+            </li>
+        
+            <li><i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Desarrollo] </span><a class="link-green" target="_blank"  href="http://www.biogenesisbago.com/paises">  Biogénesis Bago</a>, página oficial en <a class="blue" target="_blank"  href="http://www.ni54.com">NitroInteractivo</a>
+            </li>
+        
+        <li> <i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Desarrollo] </span><a class="link-green"  target="_blank" href="http://fronteras.testni54.com/ar">  Club Fronteras, Biogenésis Bagó</a> en <a class="blue" target="_blank"  href="http://www.ni54.com">NitroInteractivo</a>
+            </li>
+        
+          <li><i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Desarrollo] </span>  App Fronteras 2.0 disponible en <a class="link-green" target="_blank"  href="https://play.google.com/store/apps/details?id=com.biogenesisbago.fronteras&hl=es_419">  GooglePlay</a> &
+                  <a class="blue" target="_blank"  href="https://itunes.apple.com/ar/app/biogenesis-bago-fronteras/id1120774987?mt=8">AppStore</a>
+            </li>
+        
+        <li><i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Desarrollo] </span><a class="link-green" target="_blank"  href="http://testni54.com/penales">  Juego Boca Fun </a> en <a class="blue" target="_blank"  href="http://www.ni54.com">NitroInteractivo</a>
+            </li>
+        
+            <li><i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Desarrollo] </span><a class="link-green"  target="_blank" href="http://www.kimenastd.com">  Porfolio KimenaStd</a> en <a class="blue" target="_blank"  href="http://www.ni54.com">NitroInteractivo</a>
+                </li>
+        <li><i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Desarrollo] </span> Página oficial de Nitro Interactivo.
+            </li>
+        
+            <li> <i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Diseño+Desarrollo] </span><a class="link-green" target="_blank" href="http://fededri.github.io"> CV virtual-portfolio </a> para Federico Torres en <span class="blue">Syntagma Software </span>.
+            </li>
+        
+            <li> <i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Diseño+Desarrollo] </span><a class="link-green" target="_blank" href="http://edured-tintafresca.com/"> Plataforma Edured para Inscripción de Cursos en Schoology </a> en Tinta Fresca.
+            </li>
+        
+        
+            <li><i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Desarrollo] </span><a class="link-green" target="_blank" href="http://clubestudiantesbb.com"> Web Club estudiantes de Bahia Blanca </a> en <a class="blue" target="_blank"  href="http://www.ni54.com">NitroInteractivo</a>
+            </li>
+        
+            <li><i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Desarrollo] </span><a class="link-green" target="_blank" href="https://atom.io/themes/syntagma-ui"> Syntagma Atom UI</a>, Theme for Atom editor.
+            </li>
+        
+            <li><i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Diseño+Desarrollo] </span><a class="link-green" target="_blank" href="https://mauricio-figueroa.github.io/"> Portfolio y CV virtual</a>, para Mauricio Figueroa en <span class="blue">Syntagma Software </span>.
+            </li>
+        
+            <li><i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Desarrollo] </span><a class="link-green" target="_blank" href="http://baenred.com/"> Página oficial - Blog De BAenRed </a> en <a class="blue" target="_blank"  href="http://www.ni54.com">NitroInteractivo</a>
+            </li>
+        
+        
+            <li><i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Desarrollo] </span><a class="link-green" target="_blank" href="http://laferropedia.com/"> Página oficial - La Ferropedia </a> en NitroInteractivo.
+                </li>
+        
+        
+            <li><i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Desarrollo] </span><a class="link-green" target="_blank" href="http://synectiacirugia.com/"> Página oficial -  Synectia </a>
+            </li>
+        
+            <!--
+            <li><i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Diseño+Desarrollo] </span><a class="link-green" target="_blank" href="http://www.syntagma.company/"> Página Oficial Syntagma Software</a></li>
+             -->
+            <!-- <li><i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Web master] </span><a class="link-green" target="_blank" href="https://ieee.frba.utn.edu.ar"> Página Oficial de la Rama Estudiantil UTN  FRBA</a></li> -->
+        
+            <li><i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Diseño+Desarrollo] </span><a class="link-green" target="_blank" href="https://silver-app.com"> SilverApp</a>, Aplicación Web de logística en <span class="blue">Syntagma Software </span>.</li>
+        
+            <li><i class="fa fa-code" aria-hidden="true"></i><span class="tipo-work"> [Diseño] </span><a class="link-green" target="_blank" href="https://silver-app.com"> SilverApp</a>, Aplicación Web de logística en <span class="blue">Syntagma Software </span>.</li>
+        
+        
+            <!-- https://ieee.frba.utn.edu.ar
+            <li ><i class="fa fa-file-image-o" aria-hidden="true"></i> <a style="cursor:pointer" class="link-green" id="open-slider" target="_blank" > Diseño Flyers y folletos </a> para <a class="blue" target="_blank"  href="https://ieee.frba.utn.edu.ar">Rama Estudiantil UTN  FRBA</a>
+            </li>
+             -->
+        
+        
+        </div>
+        
+        
+        
+        
+        
+        </section>
+        
+        
+        <section class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+        
+        
+        <!-- DEMO SLIDER -->
+        
+        
+        
+        
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        
+        
+            <div class="pswp__bg"></div>
+        
+            <div class="pswp__scroll-wrap">
+        
+        
+                <div class="pswp__container">
+        
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+        
+        
+                <div class="pswp__ui pswp__ui--hidden">
+        
+                    <div class="pswp__top-bar">
+        
+                        <!--  Controls are self-explanatory. Order can be changed. -->
+        
+                        <div class="pswp__counter"></div>
+        
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        
+                        <button class="pswp__button pswp__button--share" title="Share"></button>
+        
+                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        
+                        <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                        <!-- element will get class pswp__preloader--active when preloader is running -->
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                              <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div>
+        
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                    </button>
+        
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                    </button>
+        
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+        
+                  </div>
+        
+                </div>
+        
+        </div>
+        
+        
+        <script>
+        
+        var openPhotoSwipe = function() {
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+        
+            // build items array
+            var items = [
+                {
+                    title:"Flyer de <a class='link-verde' href='https://ieee.frba.utn.edu.ar/?p=1484'> Curso Introductorio de Látex</a>. Evento realizado en la Universidad Tecnológica Nacional FRBA por la Rama Estudiantil IEEE.",
+                    src: 'https://ieee.frba.utn.edu.ar/wp-content/uploads/Infotronik-1.png',
+                    w: 464,
+                    h: 703
+                },
+                {
+                    title:"Flyer de <a class='link-verde' href='https://ieee.frba.utn.edu.ar/?p=1480'>Curso Introductorio del Kit Infotronik</a>. Evento realizado en la Universidad Tecnológica Nacional FRBA por la Rama Estudiantil IEEE.",
+                    src: 'https://ieee.frba.utn.edu.ar/wp-content/uploads/latex.png',
+                    w: 464,
+                    h: 703
+                },
+                {
+                    title:"Logo de <a class='link-verde' href='https://www.facebook.com/ieeeutnba/?ref=aymt_homepage_panel'>IEEE, Rama estudiantil UTN FRBA</a> .",
+                    src: 'https://scontent-scl1-1.xx.fbcdn.net/v/t31.0-8/18815215_1535926713093296_7507380833333311376_o.png?oh=ab41834d8d0a5dd611775fd7efa10caa&oe=59B95595',
+                    w: 811,
+                    h: 280
+                },
+                {
+                  title: "Flyer de <a class='link-verde' href='https://ieee.frba.utn.edu.ar/?p=1556'>Evento 'Encuentros GIBIO' </a>",
+                  src:"https://ieee.frba.utn.edu.ar/wp-content/uploads/Evento-nanotecnologia.png",
+                  w:421,
+                  h:668
+                },
+                {
+                  title:"Flyer de <a class='link-verde' href='https://ieee.frba.utn.edu.ar/?p=1526'>'Jornada de la Energia' </a>",
+                  src:"https://ieee.frba.utn.edu.ar/wp-content/uploads/Evento-renovables-mini-01.png",
+                  w:419,
+                  h:662
+                },
+                {
+                  title: "Tarjetas <a href='https://ieee.frba.utn.edu.ar/?page_id=1677'>¿SABÍAS QUÉ? </a> ",
+                  src:"https://ieee.frba.utn.edu.ar/wp-content/uploads/sabias-que-22-06-2017.png",
+                  w:960,
+                  h:488
+                },
+                {
+                  title:"Sección <a href='https://ieee.frba.utn.edu.ar/?page_id=1677'> 'DIAS INTERESANTES' </a>",
+                  src:"https://ieee.frba.utn.edu.ar/wp-content/uploads/dia-ingeniero-02.png",
+                  w:397,
+                  h:662
+                }
+            ];
+        
+            // define options (if needed)
+            var options = {
+                     // history & focus options are disabled on CodePen
+                history: true,
+                focus: false,
+                pinchToClose:true,
+                showAnimationDuration: 0,
+                hideAnimationDuration: 0,
+                allowPanToNext:true,
+                arrowKeys:true,
+                tapToToggleControls: true,
+                zoomEl: true,
+                shareEl: true,
+                counterEl: true,
+                arrowEl: true,
+                preloaderEl: true,
+                closeOnScroll:false,
+                showHideOpacity:true,
+                loop:true
+        
+            };
+        
+            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        };
+        
+        
+        
+        // document.getElementById('btn').onclick = openPhotoSwipe;
+        $("#open-slider").click(function(){
+          openPhotoSwipe();
+        })
+        
+        </script>
+        <!-- DEMO SLIDER -->
+        
+        </section>
+        
+        <!-- <div class="fb-follow" style="position:fixed; bottom:10px; left:10px;" data-href="https://www.facebook.com/melaniamiranda" data-width="5px" data-layout="button_count" data-show-faces="true"> -->
+        
+        <footer class="col-lg-12 col-sm-12 col-md-12 col-xs-12"> {M} · Melania Miranda © 2018</footer>
+        
+        </body>
+        <script src="smoke.js"></script>
+        
+        <!-- ends body -->
