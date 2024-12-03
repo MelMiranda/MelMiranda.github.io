@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,33 +11,85 @@
       font-family: Arial, sans-serif;
       margin: 20px;
     }
-    #form-container {
-      margin-bottom: 20px;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
     }
+
+    #results {
+      max-width: 50%;
+    }
+
+    #form-container label span {
+      font-size: 12px;
+      background: #2772d9;
+      padding: 5px 8px;
+      color: white;
+      border-radius: 100%;
+      border: 1px solid #2772d9;
+    }
+
+
     canvas {
       max-width: 100%;
       height: 400px;
     }
+
+    span {
+      color: gray;
+      font-size: 10px;
+    }
+
+    button {
+      margin: 20px 0;
+    }
   </style>
 </head>
+
 <body>
   <h1>Trabajo práctico TDC 2024 - Impresora 3D</h1>
-  <h2>Simulación de Control PID</h2>
-  <div id="form-container">
-    <label for="setpoint">Temperatura deseada (°C):</label>
-    <input type="number" id="setpoint" value="200"><br><br>
 
-    <label for="pValue">Ganancia Proporcional (P):</label>
-    <input type="number" id="pValue" value="1.2"><br><br>
 
-    <label for="iValue">Ganancia Integral (I):</label>
-    <input type="number" id="iValue" value="0.5"><br><br>
+  <div class="container">
+    <div id="form-container">
+      <h2>Simulación de Control PID</h2>
+      <label for="setpoint"> <span>1</span> Temperatura deseada (°C):</label>
+      <input type="number" id="setpoint" value="200"><br><br>
 
-    <label for="dValue">Ganancia Derivativa (D):</label>
-    <input type="number" id="dValue" value="0.1"><br><br>
+      <label for="entry"> <span>2</span> Temperatura de entrada (°C):</label>
+      <input type="number" id="entry" value="20"><br><br>
 
-    <button onclick="simulate()">Simular</button>
+
+      <label for="pValue"> <span>3</span> Ganancia Proporcional (P):</label>
+      <input type="number" id="pValue" value="1.2"><br><br>
+
+      <label for="iValue"> <span>4</span> Ganancia Integral (I):</label>
+      <input type="number" id="iValue" value="0.5"><br><br>
+
+      <label for="dValue"> <span>5</span> Ganancia Derivativa (D):</label>
+      <input type="number" id="dValue" value="0.1"><br><br>
+
+      <label for="perturbationValue"> <span>6</span> Perturbación (opcional):</label>
+      <input type="number" id="perturbationValue" value="1" min="0" max="9"> <br>
+      <span> Valor entre 0 - 9, a menos número menor perturbación</span> <br>
+
+
+
+      <button onclick="simulate()">Simular</button>
+    </div>
+
+    <div id="results">
+      <h2>Resultados de la Simulación</h2>
+      <p>Error en Estado Estable: <span id="transfer-function"></span> </p>
+      <p>Función de Transferencia: <span id="input-signal"></span> </p>
+      <p>Señales de Entrada: <span id="error-signal"></span> </p>
+      <p>Señales de Error: <span id="steady-state-error"></span> </p>
+    </div>
   </div>
+
+
+
 
   <canvas id="temperatureChart"></canvas>
 
@@ -48,26 +101,35 @@
       const P = parseFloat(document.getElementById('pValue').value);
       const I = parseFloat(document.getElementById('iValue').value);
       const D = parseFloat(document.getElementById('dValue').value);
+      const perturbation = parseFloat(document.getElementById('perturbationValue').value);
+      let currentTemp = parseFloat(document.getElementById('entry').value);
 
-      let currentTemp = 20; 
       let previousError = 0;
       let integral = 0;
 
+      const inputSignal = [];
+      const errorSignal = [];
+
       function getPerturbation() {
-        return Math.random() * 5 - 2.5; 
+        return (Math.random() - 0.5) * perturbation * 2;
       }
 
       function pidControl() {
-        const error = setpoint - currentTemp; 
-        integral += error; 
-        const derivative = error - previousError; 
+        const error = setpoint - currentTemp;
+        integral += error;
+        const derivative = (error - previousError) / 0.1;
+
 
         const output = P * error + I * integral + D * derivative;
 
-        const perturbation = getPerturbation();
-        currentTemp += output * 0.1 - perturbation;
+        const randomPerturbation = getPerturbation();
+        currentTemp += output * 0.1 - randomPerturbation;
 
-        previousError = error; 
+        previousError = error;
+
+        inputSignal.push(currentTemp.toFixed(2));
+        errorSignal.push(error.toFixed(2));
+
         return currentTemp;
       }
 
@@ -76,14 +138,30 @@
         data.push(pidControl());
       }
 
+      const steadyStateError = Math.abs(setpoint - data[data.length - 1]).toFixed(2);
+
       updateChart(data, setpoint);
+      showResults(inputSignal, errorSignal, steadyStateError);
+    }
+
+    function showResults(inputSignal, errorSignal, steadyStateError) {
+      const transferFunction = "H(s) = K / (τs + 1)";
+
+      document.getElementById('transfer-function').textContent =
+        `${transferFunction}`;
+      document.getElementById('input-signal').textContent =
+        `[${inputSignal.join(', ')}]`;
+      document.getElementById('error-signal').textContent =
+        `[${errorSignal.join(', ')}]`;
+      document.getElementById('steady-state-error').textContent =
+        `${steadyStateError}°C`;
     }
 
     function updateChart(data, setpoint) {
-      const labels = Array.from({ length: data.length }, (_, i) => i); 
+      const labels = Array.from({ length: data.length }, (_, i) => i);
 
       if (chart) {
-        chart.destroy(); 
+        chart.destroy();
       }
 
       const ctx = document.getElementById('temperatureChart').getContext('2d');
@@ -115,7 +193,7 @@
             x: {
               title: {
                 display: true,
-                text: 'Tiempo (segundos)'
+                text: 'Tiempo (ciclos)'
               }
             },
             y: {
@@ -130,4 +208,5 @@
     }
   </script>
 </body>
+
 </html>
